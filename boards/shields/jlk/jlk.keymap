@@ -14,6 +14,11 @@
   release-after-ms = <1000>;
 };
 
+&sk {
+  release-after-ms = <1000>;
+  quick-release;
+};
+
 
 / {
 
@@ -27,19 +32,19 @@
     combo_ctrl {
       timeout-ms = <25>;
       key-positions = <12 13>;
-      bindings = <&kp LCTRL>;
+      bindings = <&sk LCTRL>;
     };
 
     combo_alt {
       timeout-ms = <25>;
       key-positions = <11 12>;
-      bindings = <&kp LALT>;
+      bindings = <&sk LALT>;
     };
 
     combo_cmd {
       timeout-ms = <25>;
       key-positions = <11 12 13>;
-      bindings = <&kp LCMD>;
+      bindings = <&sk LCMD>;
     };
 
     combo_ent {
