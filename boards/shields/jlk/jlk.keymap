@@ -48,7 +48,7 @@
       key-positions = <7 8>;
       bindings = <&kp PG_UP>;
     };
-    combo_pgup {
+    combo_pgdn {
       timeout-ms = <25>;
       key-positions = <6 7>;
       bindings = <&kp PG_DN>;
