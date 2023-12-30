@@ -16,15 +16,10 @@
 
 
 / {
-  behaviors {
-    mo_st: behavior_mo_st {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      #flavor = "hold-preferred";
-      tapping-term-ms = <150>;
-      bindings = <&kp>, <&sl>;
-    };
-  };
+
+  ##############################################################################
+  # Combos
+  ##############################################################################
 
   combos {
     compatible = "zmk,combos";
@@ -60,6 +55,55 @@
     };
   };
 
+  ##############################################################################
+  # Macros
+  ##############################################################################
+
+  macros {
+    less_eq: less_eq {
+      compatible = "zmk,behavior-macro";
+      bindings
+        = <&macro_tap &kp LT &kp EQUAL>
+        ;
+    };
+  };
+
+  macros {
+    two_tab: two_tab {
+      compatible = "zmk,behavior-macro";
+      bindings
+        = <&macro_tap &kp TAB &kp TAB>
+        ;
+    };
+  };
+
+  macros {
+    four_tab: four_tab {
+      compatible = "zmk,behavior-macro";
+      bindings
+        = <&macro_tap &kp TAB &kp TAB &kp TAB &kp TAB>
+        ;
+    };
+  };
+
+  ##############################################################################
+  # Custom layer switching
+  ##############################################################################
+
+  behaviors {
+    mo_st: behavior_mo_st {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      #flavor = "hold-preferred";
+      tapping-term-ms = <150>;
+      bindings = <&kp>, <&sl>;
+    };
+  };
+
+  ##############################################################################
+  # Keymap
+  ##############################################################################
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -76,7 +120,7 @@
       bindings = <
         &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-        &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+        &trans &COLON &trans &trans &trans &trans &trans &trans &trans &trans
         &trans &trans &trans &trans
         >;
     };
@@ -84,7 +128,7 @@
     symbol_layer {
       bindings = <
         &trans    &kp QMARK &kp PLUS  &kp MINUS &trans    &trans    &kp LBRC &kp RBRC &kp BSLH &trans
-        &kp TILDE &kp FSLH  &kp EQUAL &kp UNDER &trans    &trans    &kp LBKT &kp RBKT &kp PIPE &kp GRAVE
+        &kp TILDE &kp FSLH  &kp EQUAL &kp UNDER &less_eq  &trans    &kp LBKT &kp RBKT &kp PIPE &kp GRAVE
         &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
         &trans &trans &trans &trans
         >;
@@ -92,9 +136,9 @@
 
     hold_layer {
       bindings = <
-        &trans &trans   &kp UP    &trans   &trans &trans  &trans   &kp LC(LS(TAB)) &kp LC(TAB)  &trans
-        &trans &kp LEFT &kp RIGHT &kp DOWN &trans &kp DEL &kp BSPC &kp BSPC        &kp LC(BSPC) &kp LA(BSPC)
-        &trans &trans   &trans    &trans   &trans &trans  &trans   &trans          &trans       &trans
+        &trans &trans   &kp UP    &trans   &trans &two_tab &four_tab &kp LC(LS(TAB)) &kp LC(TAB)  &trans
+        &trans &kp LEFT &kp RIGHT &kp DOWN &trans &kp DEL  &kp BSPC  &kp BSPC        &kp LC(BSPC) &kp LA(BSPC)
+        &trans &trans   &trans    &trans   &trans &trans   &trans    &trans          &trans       &trans
         &trans &trans &trans &trans
         >;
     };
