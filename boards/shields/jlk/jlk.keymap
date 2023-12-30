@@ -2,9 +2,9 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
-#define NUMBERS 1
-#define SYMBOLS 2
-#define HOLD    3
+#define SYMBOLS 1
+#define HOLD    2
+#define NUMBERS 3
 
 &lt {
   tapping-term-ms = <150>;
@@ -125,15 +125,6 @@
         >;
     };
 
-    number_layer {
-      bindings = <
-        &trans &trans    &trans &trans &trans &trans &trans &trans &trans &trans
-        &kp N1 &kp N2    &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-        &trans &kp COLON &trans &trans &trans &trans &trans &trans &trans &trans
-        &trans &trans    &trans &trans
-        >;
-    };
-
     symbol_layer {
       bindings = <
         &trans    &kp QMARK &kp PLUS  &kp MINUS &trans    &trans    &kp LBRC &kp RBRC &kp BSLH &trans
@@ -147,8 +138,17 @@
       bindings = <
         &trans &trans   &kp UP    &trans   &trans &two_tab &four_tab &kp LC(LS(TAB)) &kp LC(TAB)  &trans
         &trans &kp LEFT &kp RIGHT &kp DOWN &trans &kp DEL  &kp BSPC  &kp BSPC        &kp LC(BSPC) &kp LA(BSPC)
-        &trans &trans   &trans    &trans   &trans &trans   &trans    &trans          &trans       &trans
+        &kp N1 &kp N2   &kp N3    &kp N4   &kp N5 &kp N6   &kp N7    &kp N8          &kp N9       &kp N0
         &caps_word &trans &trans &trans
+        >;
+    };
+
+    number_layer {
+      bindings = <
+        &trans &trans    &trans &trans &trans &trans &trans &trans &trans &trans
+        &kp N1 &kp N2    &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+        &trans &kp COLON &trans &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans    &trans &trans
         >;
     };
 
