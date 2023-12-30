@@ -26,6 +26,40 @@
     };
   };
 
+  combos {
+    compatible = "zmk,combos";
+    combo_ctrl {
+      timeout-ms = <25>;
+      key-positions = <12 13>;
+      bindings = <&kp LCTRL>;
+    };
+    combo_alt {
+      timeout-ms = <25>;
+      key-positions = <11 12>;
+      bindings = <&kp LALT>;
+    };
+    combo_cmd {
+      timeout-ms = <25>;
+      key-positions = <11 12 13>;
+      bindings = <&kp LCMD>;
+    };
+    combo_ent {
+      timeout-ms = <25>;
+      key-positions = <16 17>;
+      bindings = <&kp ENTER>;
+    };
+    combo_pgup {
+      timeout-ms = <25>;
+      key-positions = <7 8>;
+      bindings = <&kp PG_UP>;
+    };
+    combo_pgup {
+      timeout-ms = <25>;
+      key-positions = <6 7>;
+      bindings = <&kp PG_DN>;
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
