@@ -68,6 +68,7 @@
   macros {
     less_eq: less_eq {
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings
         = <&macro_tap &kp LT &kp EQUAL>
         ;
@@ -75,6 +76,7 @@
 
     two_tab: two_tab {
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings
         = <&macro_tap &kp TAB &kp TAB>
         ;
@@ -82,6 +84,7 @@
 
     four_tab: four_tab {
       compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
       bindings
         = <&macro_tap &kp TAB &kp TAB &kp TAB &kp TAB>
         ;
