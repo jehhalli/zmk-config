@@ -11,17 +11,13 @@
 
 &lt {
   tapping-term-ms = <150>;
-};
-
-&sl {
-  release-after-ms = <1000>;
+  flavor = "hold-preferred";
 };
 
 &sk {
   release-after-ms = <1000>;
   quick-release;
 };
-
 
 / {
 
@@ -173,7 +169,7 @@
       >;
     };
 
-    bt_layer {
+    bluetooth_layer {
       bindings = <
         &trans        &trans        &trans        &trans &trans &trans &trans       &trans       &trans &trans
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
