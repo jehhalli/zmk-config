@@ -175,9 +175,9 @@
 
     bt_layer {
       bindings = <
-        &trans       &trans       &trans       &trans &trans &trans       &trans       &trans &trans &trans
-        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans &out OUT_USB &out OUT_BLE &trans &trans &trans
-        &trans       &trans       &trans       &trans &trans &trans       &trans       &trans &trans &trans
+        &trans        &trans        &trans        &trans &trans &trans &trans       &trans       &trans &trans
+        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
+        &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &trans &trans &trans &trans       &trans       &trans &trans
         &trans &trans &trans &trans
       >;
     };
