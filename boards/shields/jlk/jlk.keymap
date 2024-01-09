@@ -47,22 +47,52 @@
       bindings = <&sk LCMD>;
     };
 
-    combo_ent {
-      timeout-ms = <25>;
-      key-positions = <16 17>;
-      bindings = <&kp ENTER>;
-    };
-
     combo_pgup {
       timeout-ms = <25>;
-      key-positions = <7 8>;
+      key-positions = <3 4>;
       bindings = <&kp PG_UP>;
     };
 
     combo_pgdn {
       timeout-ms = <25>;
-      key-positions = <6 7>;
+      key-positions = <13 14>;
       bindings = <&kp PG_DN>;
+    };
+
+    combo_fslh {
+      timeout-ms = <25>;
+      key-positions = <6 7>;
+      bindings = <&kp FSLH>;
+    };
+
+    combo_bslh {
+      timeout-ms = <25>;
+      key-positions = <7 8>;
+      bindings = <&kp BSLH>;
+    };
+
+    combo_minus {
+      timeout-ms = <25>;
+      key-positions = <16 17>;
+      bindings = <&kp MINUS>;
+    };
+
+    combo_equal {
+      timeout-ms = <25>;
+      key-positions = <17 18>;
+      bindings = <&kp EQUAL>;
+    };
+
+    combo_lbkt {
+      timeout-ms = <25>;
+      key-positions = <26 27>;
+      bindings = <&kp LBKT>;
+    };
+
+    combo_rbkt {
+      timeout-ms = <25>;
+      key-positions = <27 28>;
+      bindings = <&kp RBKT>;
     };
   };
 
@@ -136,9 +166,9 @@
 
     hold_layer {
       bindings = <
-        &trans &trans   &kp UP    &trans   &kp PG_UP &two_tab &four_tab &kp LC(LS(TAB)) &kp LC(TAB)  &trans
-        &trans &kp LEFT &kp RIGHT &kp DOWN &kp PG_DN &kp DEL  &kp BSPC  &kp BSPC        &kp LC(BSPC) &kp LA(BSPC)
-        &trans &trans   &trans    &trans   &trans    &trans   &trans    &trans          &trans       &trans
+        &trans &trans   &kp UP   &trans    &kp PG_UP &two_tab &four_tab &kp LC(LS(TAB)) &kp LC(TAB)  &trans
+        &trans &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &kp DEL  &kp BSPC  &kp BSPC        &kp LC(BSPC) &kp LA(BSPC)
+        &trans &trans   &trans   &trans    &trans    &trans   &trans    &trans          &trans       &trans
         &trans &trans &trans &trans
       >;
     };
