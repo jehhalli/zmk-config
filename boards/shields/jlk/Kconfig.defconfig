@@ -3,13 +3,13 @@ if SHIELD_JLK
 config ZMK_KEYBOARD_NAME
   default "jlk"
 
-config CONFIG_ZMK_SLEEP
+config ZMK_SLEEP
   default y
 
-config CONFIG_ZMK_IDLE_SLEEP_TIMEOUT
+config ZMK_IDLE_SLEEP_TIMEOUT
   default 300000
 
-config CONFIG_ZMK_EXT_POWER
+config ZMK_EXT_POWER
   default n
 
 endif
