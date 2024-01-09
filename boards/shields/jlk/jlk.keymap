@@ -64,13 +64,13 @@
 
     combo_fslh {
       timeout-ms = <25>;
-      key-positions = <6 7>;
+      key-positions = <26 27>;
       bindings = <&kp FSLH>;
     };
 
     combo_bslh {
       timeout-ms = <25>;
-      key-positions = <7 8>;
+      key-positions = <27 28>;
       bindings = <&kp BSLH>;
     };
 
@@ -88,13 +88,13 @@
 
     combo_lbkt {
       timeout-ms = <25>;
-      key-positions = <26 27>;
+      key-positions = <6 7>;
       bindings = <&kp LBKT>;
     };
 
     combo_rbkt {
       timeout-ms = <25>;
-      key-positions = <27 28>;
+      key-positions = <7 8>;
       bindings = <&kp RBKT>;
     };
 
