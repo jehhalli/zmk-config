@@ -7,7 +7,6 @@
 #define L_HOLD    1
 #define L_NUM     2
 #define L_BT      3
-#define L_SYM     4
 
 &lt {
   tapping-term-ms = <150>;
@@ -174,15 +173,6 @@
         &trans        &trans        &trans        &trans &trans &trans &trans       &trans       &trans &trans
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
         &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &trans &trans &trans &trans       &trans       &trans &trans
-        &trans &trans &trans &trans
-      >;
-    };
-
-    symbol_layer {
-      bindings = <
-        &trans    &kp QMARK &kp PLUS  &kp MINUS &trans    &trans    &kp LBRC &kp RBRC &kp BSLH &trans
-        &kp TILDE &kp FSLH  &kp EQUAL &kp UNDER &trans    &trans    &kp LBKT &kp RBKT &kp PIPE &kp GRAVE
-        &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
         &trans &trans &trans &trans
       >;
     };
