@@ -97,6 +97,12 @@
       key-positions = <27 28>;
       bindings = <&kp RBKT>;
     };
+
+    combo_grave {
+      timeout-ms = <25>;
+      key-positions = <15 16>;
+      bindings = <&kp GRAVE>;
+    };
   };
 
   //----------------------------------------------------------------------------
@@ -118,19 +124,6 @@
       bindings
         = <&macro_tap &kp TAB &kp TAB &kp TAB &kp TAB>
         ;
-    };
-  };
-
-  //----------------------------------------------------------------------------
-  // Tap Dance
-  //----------------------------------------------------------------------------
-
-  behaviors {
-    td_shift: tap_dance_mod_tap {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>;
-      tapping-term-ms = <150>;
-      bindings = <&mt LSHIFT ESC>, <&caps_word>;
     };
   };
 
@@ -158,7 +151,7 @@
         &kp SQT  &kp COMMA &kp DOT &kp P &kp Y &kp F &kp G &kp C &kp R &kp L
         &kp A    &kp O     &kp E   &kp U &kp I &kp D &kp H &kp T &kp N &kp S
         &kp SEMI &kp Q     &kp J   &kp K &kp X &kp B &kp M &kp W &kp V &kp Z
-        &td_shift &lt L_HOLD TAB &lt L_NUM ENTER &kp SPACE
+        &mt LSHIFT ESC &lt L_HOLD TAB &lt L_NUM ENTER &kp SPACE
       >;
     };
 
@@ -176,7 +169,7 @@
         &trans   &trans &trans   &trans   &trans    &trans    &trans   &trans   &trans   &trans
         &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &kp N6    &kp N7   &kp N8   &kp N9   &kp N0
         &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
-        &trans &trans &trans &trans
+        &caps_word &trans &trans &trans
       >;
     };
 
