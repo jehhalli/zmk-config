@@ -32,7 +32,7 @@
   };
 
   default_transform: keymap_transform_0 {
-    compatible = "zmk, matrix-transform";
+    compatible = "zmk,matrix-transform";
     columns = <10>;
     rows = <4>;
     map = <
