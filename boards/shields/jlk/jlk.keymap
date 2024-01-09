@@ -47,7 +47,7 @@
 
     combo_pgup {
       timeout-ms = <25>;
-      key-positions = <3 4>;
+      key-positions = <3 14>;
       bindings = <&kp PG_UP>;
     };
 
@@ -95,7 +95,7 @@
 
     combo_grave {
       timeout-ms = <25>;
-      key-positions = <15 16>;
+      key-positions = <15 6>;
       bindings = <&kp GRAVE>;
     };
   };
