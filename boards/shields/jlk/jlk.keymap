@@ -152,9 +152,9 @@
 
     hold_layer {
       bindings = <
-        &trans &trans   &kp UP   &trans    &kp PG_UP &two_tab &four_tab &kp LC(LS(TAB)) &kp LC(TAB)  &trans
-        &trans &kp LEFT &kp DOWN &kp RIGHT &kp PG_DN &kp DEL  &kp BSPC  &kp BSPC        &kp LC(BSPC) &kp LA(BSPC)
-        &trans &trans   &trans   &trans    &trans    &trans   &trans    &trans          &trans       &trans
+        &trans &trans   &kp UP   &trans    &kp HOME &two_tab &four_tab &kp LC(LS(TAB)) &kp LC(TAB)  &trans
+        &trans &kp LEFT &kp DOWN &kp RIGHT &kp END  &kp DEL  &kp BSPC  &kp BSPC        &kp LC(BSPC) &kp LA(BSPC)
+        &trans &trans   &trans   &trans    &trans   &trans   &trans    &trans          &trans       &trans
         &trans &trans &trans &trans
       >;
     };
@@ -170,7 +170,7 @@
 
     bluetooth_layer {
       bindings = <
-        &trans        &trans        &trans        &trans &trans &trans &trans       &trans       &trans &trans
+        &trans        &trans        &trans        &trans &trans &trans &trans       &trans       &trans &bootloader
         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
         &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &trans &trans &trans &trans       &trans       &trans &trans
         &trans &trans &trans &trans
