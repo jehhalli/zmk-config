@@ -6,21 +6,11 @@
 #define L_DEFAULT 0
 #define L_BT      1
 
+&lt {
+  tapping-term-ms = <150>;
+};
+
 / {
-
-  //----------------------------------------------------------------------------
-  // Combos
-  //----------------------------------------------------------------------------
-
-  combos {
-    compatible = "zmk,combos";
-
-    combo_ctrl {
-      timeout-ms = <25>;
-      key-positions = <12 13>;
-      bindings = <&mo L_BT>;
-    };
-  };
 
   //----------------------------------------------------------------------------
   // Keymap
@@ -31,21 +21,21 @@
 
     default_layer {
       bindings = <
-        &kp N1 &kp N2    &kp N3   &kp N4   &kp N5                                  &kp N6   &kp N7   &kp N8     &kp N9       &kp N0       &kp MINUS
-        &kp Q  &kp W     &kp E    &kp R    &kp T     &kp TAB             &kp ESC   &kp Y    &kp U    &kp I      &kp O        &kp P        &kp EQUAL
-        &kp A  &kp S     &kp D    &kp F    &kp G     &kp LSHIFT &kp UP   &kp ENTER &kp H    &kp J    &kp K      &kp L        &kp SEMI     &kp SQT
-        &kp Z  &kp X     &kp C    &kp V    &kp B     &kp LEFT   &kp DOWN &kp RIGHT &kp N    &kp M    &kp COMMA  &kp DOT      &kp FSLH     &kp BSLH
-               &kp GRAVE &kp LBKT &kp RBKT &kp SPACE &kp LCTRL  &kp LALT &kp LCMD  &kp BSPC &kp K_PP &kp K_NEXT &kp K_VOL_UP &kp K_VOL_DN
+        &kp N1 &kp N2    &kp N3   &kp N4   &kp N5                                       &kp N6   &kp N7   &kp N8     &kp N9       &kp N0       &kp MINUS
+        &kp Q  &kp W     &kp E    &kp R    &kp T     &kp TAB             &lt L_BT ESC   &kp Y    &kp U    &kp I      &kp O        &kp P        &kp EQUAL
+        &kp A  &kp S     &kp D    &kp F    &kp G     &kp LSHIFT &kp UP   &kp ENTER      &kp H    &kp J    &kp K      &kp L        &kp SEMI     &kp SQT
+        &kp Z  &kp X     &kp C    &kp V    &kp B     &kp LEFT   &kp DOWN &kp RIGHT      &kp N    &kp M    &kp COMMA  &kp DOT      &kp FSLH     &kp BSLH
+               &kp GRAVE &kp LBKT &kp RBKT &kp SPACE &kp LCTRL  &kp LALT &kp LCMD       &kp BSPC &kp K_PP &kp K_NEXT &kp K_VOL_UP &kp K_VOL_DN
       >;
     };
 
     bluetooth_layer {
       bindings = <
-        &trans &trans &trans &trans        &trans                      &trans &trans       &trans &trans &trans &trans
-        &trans &trans &trans &trans        &trans &trans        &trans &trans &trans       &trans &trans &trans &trans
-        &trans &trans &trans &bt BT_SEL 0  &trans &trans &trans &trans &trans &out OUT_BLE &trans &trans &trans &trans
-        &trans &trans &trans &bt BT_DISC 0 &trans &trans &trans &trans &trans &out OUT_USB &trans &trans &trans &trans
-               &trans &trans &trans        &trans &trans &trans &trans &trans &trans       &trans &trans &trans
+        &trans &trans &trans &trans       &trans                      &trans &trans        &trans &trans &trans &bootloader
+        &trans &trans &trans &trans       &trans &trans        &trans &trans &trans        &trans &trans &trans &trans
+        &trans &trans &trans &out OUT_BLE &trans &trans &trans &trans &trans &bt BT_SEL 0  &trans &trans &trans &trans
+        &trans &trans &trans &out OUT_USB &trans &trans &trans &trans &trans &bt BT_DISC 0 &trans &trans &trans &trans
+               &trans &trans &trans       &trans &trans &trans &trans &trans &trans        &trans &trans &trans
       >;
     };
   };
