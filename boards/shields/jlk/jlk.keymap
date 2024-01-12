@@ -59,7 +59,7 @@
 
     combo_fslh {
       timeout-ms = <25>;
-      key-positions = <26 27>;
+      key-positions = <17 18>;
       bindings = <&kp FSLH>;
     };
 
@@ -77,7 +77,7 @@
 
     combo_equal {
       timeout-ms = <25>;
-      key-positions = <17 18>;
+      key-positions = <26 27>;
       bindings = <&kp EQUAL>;
     };
 
