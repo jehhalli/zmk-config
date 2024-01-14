@@ -41,7 +41,7 @@
 
     combo_cmd {
       timeout-ms = <25>;
-      key-positions = <11 12 13>;
+      key-positions = <11 13>;
       bindings = <&sk LCMD>;
     };
 
