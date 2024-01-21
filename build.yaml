@@ -21,6 +21,8 @@ include:
   - board: nice_nano_v2
     shield: jlk
   - board: nice_nano_v2
-    shield: jlks
+    shield: jlks_left
+  - board: nice_nano_v2
+    shield: jlks_right
   - board: nice_nano_v2
     shield: kfs
