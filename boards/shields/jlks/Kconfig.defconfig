@@ -16,4 +16,13 @@ config ZMK_SPLIT
 config ZMK_KSCAN_DIRECT_POLLING
   default y
 
+config ZMK_SLEEP
+  default y
+
+config ZMK_IDLE_SLEEP_TIMEOUT
+  default 300000
+
+config ZMK_EXT_POWER
+  default n
+
 endif
