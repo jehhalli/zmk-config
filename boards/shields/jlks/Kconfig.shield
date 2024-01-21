@@ -1,0 +1,5 @@
+config SHIELD_JLKS_LEFT
+  def_bool $(shields_list_contains,jlks_left)
+
+config SHIELD_JLKS_RIGHT
+  def_bool $(shields_list_contains,jlks_right)

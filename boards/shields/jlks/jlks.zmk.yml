@@ -1,0 +1,10 @@
+file_format: "1"
+id: jlks
+name: jlks
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - jlks_left
+  - jlks_right
