@@ -13,9 +13,6 @@ if SHIELD_JLKS_LEFT || SHIELD_JLKS_RIGHT
 config ZMK_SPLIT
   default y
 
-config ZMK_KSCAN_DIRECT_POLLING
-  default y
-
 config ZMK_SLEEP
   default y
 
