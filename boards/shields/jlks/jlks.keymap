@@ -29,72 +29,84 @@
 
     combo_ctrl {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <12 13>;
       bindings = <&sk LCTRL>;
     };
 
     combo_alt {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <11 12>;
       bindings = <&sk LALT>;
     };
 
     combo_cmd {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <11 13>;
       bindings = <&sk LCMD>;
     };
 
     combo_pgup {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <3 14>;
       bindings = <&kp PG_UP>;
     };
 
     combo_pgdn {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <13 14>;
       bindings = <&kp PG_DN>;
     };
 
     combo_fslh {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <17 18>;
       bindings = <&kp FSLH>;
     };
 
     combo_bslh {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <27 28>;
       bindings = <&kp BSLH>;
     };
 
     combo_minus {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <16 17>;
       bindings = <&kp MINUS>;
     };
 
     combo_equal {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <26 27>;
       bindings = <&kp EQUAL>;
     };
 
     combo_lbkt {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <6 7>;
       bindings = <&kp LBKT>;
     };
 
     combo_rbkt {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <7 8>;
       bindings = <&kp RBKT>;
     };
 
     combo_grave {
       timeout-ms = <25>;
+      layers = <L_DEFAULT>;
       key-positions = <15 6>;
       bindings = <&kp GRAVE>;
     };
