@@ -90,20 +90,6 @@
       bindings = <&kp EQUAL>;
     };
 
-    combo_lbkt {
-      timeout-ms = <25>;
-      layers = <L_DEFAULT>;
-      key-positions = <6 7>;
-      bindings = <&kp LBKT>;
-    };
-
-    combo_rbkt {
-      timeout-ms = <25>;
-      layers = <L_DEFAULT>;
-      key-positions = <7 8>;
-      bindings = <&kp RBKT>;
-    };
-
     combo_grave {
       timeout-ms = <25>;
       layers = <L_DEFAULT>;
@@ -182,9 +168,9 @@
 
     bluetooth_layer {
       bindings = <
-        &trans        &trans        &trans        &trans &trans &trans &trans       &trans       &trans &bootloader
-        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
-        &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &trans &trans &trans &trans       &trans       &trans &trans
+        &trans        &trans        &trans &trans &trans &trans &trans       &trans       &trans &bootloader
+        &bt BT_SEL 0  &bt BT_SEL 1  &trans &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
+        &bt BT_DISC 0 &bt BT_DISC 1 &trans &trans &trans &trans &trans       &trans       &trans &trans
         &trans &trans &trans &trans
       >;
     };
