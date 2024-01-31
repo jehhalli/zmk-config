@@ -3,19 +3,13 @@ if SHIELD_JLK
 config ZMK_KEYBOARD_NAME
   default "jlk"
 
-# config ZMK_SLEEP
-#   default y
-# 
-# config ZMK_IDLE_SLEEP_TIMEOUT
-#   default 300000
-# 
-# config ZMK_EXT_POWER
-#   default n
+config ZMK_SLEEP
+  default y
 
-config BT
-  default n
+config ZMK_IDLE_SLEEP_TIMEOUT
+  default 300000
 
-config ZMK_BLE
+config ZMK_EXT_POWER
   default n
 
 endif
