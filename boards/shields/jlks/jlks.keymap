@@ -48,22 +48,6 @@
       bindings = <&sk LCMD>;
     };
 
-    /*
-    combo_pgup {
-      timeout-ms = <25>;
-      layers = <L_DEFAULT>;
-      key-positions = <3 14>;
-      bindings = <&kp PG_UP>;
-    };
-
-    combo_pgdn {
-      timeout-ms = <25>;
-      layers = <L_DEFAULT>;
-      key-positions = <13 14>;
-      bindings = <&kp PG_DN>;
-    };
-    */
-
     combo_fslh {
       timeout-ms = <25>;
       layers = <L_DEFAULT>;
@@ -170,9 +154,9 @@
 
     bluetooth_layer {
       bindings = <
-        &trans        &trans        &trans &trans &trans &trans &trans       &trans       &trans &bootloader
-        &bt BT_SEL 0  &bt BT_SEL 1  &trans &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
-        &bt BT_DISC 0 &bt BT_DISC 1 &trans &trans &trans &trans &trans       &trans       &trans &trans
+        &bt BT_CLR_ALL &trans        &trans &trans &trans &trans &trans       &trans       &trans &bootloader
+        &bt BT_SEL 0   &bt BT_SEL 1  &trans &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans
+        &bt BT_DISC 0  &bt BT_DISC 1 &trans &trans &trans &trans &trans       &trans       &trans &trans
         &trans &trans &trans &trans
       >;
     };
