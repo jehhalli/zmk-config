@@ -113,16 +113,15 @@
   //----------------------------------------------------------------------------
 
   conditional_layers {
+
     compatible = "zmk,conditional-layers";
-    tri_layer {
+
+    tri_bt_layer {
       if-layers = <L_HOLD L_NUM>;
       then-layer = <L_BT>;
     };
-  };
 
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    tri_layer {
+    tri_bt_mac_layer {
       if-layers = <L_MAC_HOLD L_NUM>;
       then-layer = <L_BT>;
     };
