@@ -27,6 +27,20 @@
   combos {
     compatible = "zmk,combos";
 
+    combo_reset_left {
+      timeout-ms = <30>;
+      layers = <L_DEFAULT>;
+      key-positions = <10 11 12 13>;
+      bindings = <&sys_reset>;
+    };
+
+    combo_reset_right {
+      timeout-ms = <30>;
+      layers = <L_DEFAULT>;
+      key-positions = <16 17 18 19>;
+      bindings = <&sys_reset>;
+    };
+
     combo_ctrl {
       timeout-ms = <30>;
       layers = <L_DEFAULT>;
