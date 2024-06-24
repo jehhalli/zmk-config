@@ -1,0 +1,10 @@
+file_format: "1"
+id: jlkfs
+name: jlkfs
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - jlkfs_left
+  - jlkfs_right

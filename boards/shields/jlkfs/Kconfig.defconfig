@@ -1,0 +1,25 @@
+if SHIELD_JLKFS_LEFT
+
+config ZMK_KEYBOARD_NAME
+  default "jlkfs"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+  default y
+
+endif
+
+if SHIELD_JLKFS_LEFT || SHIELD_JLKFS_RIGHT
+
+config ZMK_SPLIT
+  default y
+
+config ZMK_SLEEP
+  default y
+
+config ZMK_IDLE_SLEEP_TIMEOUT
+  default 300000
+
+config ZMK_EXT_POWER
+  default n
+
+endif
