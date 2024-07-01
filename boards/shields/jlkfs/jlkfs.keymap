@@ -39,6 +39,20 @@
       bindings = <&sk LCMD>;
     };
 
+    combo_rst_left {
+      timeout-ms = <30>;
+      layers = <L_DEFAULT>;
+      key-positions = <10 24 38>;
+      bindings = <&sys_reset>;
+    };
+
+    combo_rst_right {
+      timeout-ms = <30>;
+      layers = <L_DEFAULT>;
+      key-positions = <23 37 51>;
+      bindings = <&sys_reset>;
+    };
+
   };
 
   //----------------------------------------------------------------------------
