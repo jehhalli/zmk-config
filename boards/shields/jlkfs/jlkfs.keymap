@@ -6,6 +6,7 @@
 #define L_DEFAULT 0
 #define L_BT      1
 #define L_NUMPAD  2
+#define L_NUMBER  3
 
 &lt {
   tapping-term-ms = <150>;
@@ -25,6 +26,13 @@
 
   combos {
     compatible = "zmk,combos";
+
+    combo_alt {
+      timeout-ms = <30>;
+      layers = <L_DEFAULT>;
+      key-positions = <33 34>;
+      bindings = <&sk LALT>;
+    };
 
     combo_caps_word {
       timeout-ms = <30>;
@@ -94,11 +102,11 @@
 
     default_layer {
       bindings = <
-                   &kp N1   &kp N2    &kp N3  &kp N4 &kp N5                        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-        &kp LBKT   &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
-        &fslhgrave &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN &kp D  &kp H  &kp T  &kp N  &kp S  &minustilde
-        &kp BSLH   &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC  &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
-        &kp DOWN &kp UP &mt LSHIFT ESC &mt LCTRL TAB &mt LALT ENTER &spcctrltab &kp LEFT &kp RIGHT
+                 &kp N1   &kp N2    &kp N3  &kp N4 &kp N5                        &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+        &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
+        &kp FSLH &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
+        &kp BSLH &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC  &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
+        &kp DOWN &kp UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_NUMBER ENTER &spcctrltab &kp LEFT &kp RIGHT
       >;
     };
 
@@ -119,6 +127,16 @@
         &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N4 &kp N5 &kp N6 &trans &trans
         &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N1 &kp N2 &kp N3 &trans &trans
                              &trans &trans &trans &trans &trans &kp N0 &trans &trans
+      >;
+    };
+
+    number_layer {
+      bindings = <
+                  &trans   &trans &trans   &trans   &trans                  &trans    &trans   &trans   &trans   &trans 
+        &trans    &trans   &trans &trans   &trans   &trans    &trans &trans &trans    &trans   &trans   &trans   &trans   &trans
+        &kp LPAR  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &trans &trans &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &kp RPAR
+        &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &trans &trans &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp TILDE
+                                  &trans   &trans   &trans    &trans &trans &trans    &trans   &trans
       >;
     };
 
