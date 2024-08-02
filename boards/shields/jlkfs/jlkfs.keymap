@@ -5,8 +5,7 @@
 
 #define L_DEFAULT 0
 #define L_BT      1
-#define L_NUMPAD  2
-#define L_NUMBER  3
+#define L_NUMBER  2
 
 &lt {
   tapping-term-ms = <150>;
@@ -27,41 +26,12 @@
   combos {
     compatible = "zmk,combos";
 
-    combo_alt {
-      timeout-ms = <30>;
-      layers = <L_DEFAULT>;
-      key-positions = <33 34>;
-      bindings = <&sk LALT>;
-    };
-
     combo_caps_word {
       timeout-ms = <30>;
       layers = <L_DEFAULT>;
       key-positions = <54 57>;
       bindings = <&caps_word>;
     };
-
-    combo_cmd {
-      timeout-ms = <30>;
-      layers = <L_DEFAULT>;
-      key-positions = <27 28>;
-      bindings = <&sk LCMD>;
-    };
-
-    combo_rst_left {
-      timeout-ms = <30>;
-      layers = <L_DEFAULT>;
-      key-positions = <10 24 38>;
-      bindings = <&sys_reset>;
-    };
-
-    combo_rst_right {
-      timeout-ms = <30>;
-      layers = <L_DEFAULT>;
-      key-positions = <23 37 51>;
-      bindings = <&sys_reset>;
-    };
-
   };
 
   //----------------------------------------------------------------------------
@@ -87,35 +57,6 @@
   };
 
   //----------------------------------------------------------------------------
-  // Mod-Morph
-  //----------------------------------------------------------------------------
-
-  behaviors {
-    // Use ctrl-space to get ctrl-tab
-    spcctrltab: space_ctrl_tab {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp SPACE>, <&kp TAB>;
-      mods = <(MOD_LCTL)>;
-      keep-mods = <(MOD_LCTL)>;
-    };
-
-    fslhgrave: fslash_grave {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp FSLH>, <&kp GRAVE>;
-      mods = <(MOD_LALT)>;
-    };
-
-    minustilde: minus_tilde {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp MINUS>, <&kp TILDE>;
-      mods = <(MOD_LALT)>;
-    };
-  };
-
-  //----------------------------------------------------------------------------
   // Keymap
   //----------------------------------------------------------------------------
 
@@ -128,7 +69,7 @@
         &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP  &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
         &kp FSLH &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN  &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
         &kp BSLH &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC   &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
-        &kp DOWN &kp UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_NUMBER ENTER &kp SPACE &kp LEFT &kp RIGHT
+        &kp DOWN &mt LCMD UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_NUMBER ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
       >;
     };
 
@@ -139,16 +80,6 @@
         &trans &bt BT_SEL 0   &bt BT_SEL 1  &trans &trans &trans &trans &trans &trans &out OUT_BLE &out OUT_USB &trans &trans &trans
         &trans &bt BT_DISC 0  &bt BT_DISC 1 &trans &trans &trans &trans &trans &trans &trans       &trans       &trans &trans &trans
                                             &trans &trans &trans &trans &trans &trans &trans       &trans
-      >;
-    };
-
-    numpad_layer {
-      bindings = <
-               &trans &trans &trans &trans &trans               &trans &trans &trans &trans &trans 
-        &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N7 &kp N8 &kp N9 &trans &trans
-        &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N4 &kp N5 &kp N6 &trans &trans
-        &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N1 &kp N2 &kp N3 &trans &trans
-                             &trans &trans &trans &trans &trans &kp N0 &trans &trans
       >;
     };
 
