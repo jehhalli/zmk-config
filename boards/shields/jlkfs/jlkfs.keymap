@@ -101,11 +101,11 @@
 
     numpad_layer {
       bindings = <
-               &trans    &trans   &trans          &trans      &trans                  &trans &trans &trans &trans &trans 
-        &trans &trans    &trans   &kp LC(LS(TAB)) &kp LC(TAB) &trans    &trans &trans &trans &kp N7 &kp N8 &kp N9 &trans &trans
-        &trans &kp EXCL  &kp AT   &kp HASH        &kp DLLR    &kp PRCNT &trans &trans &trans &kp N4 &kp N5 &kp N6 &trans &trans
-        &trans &kp CARET &kp AMPS &kp STAR        &kp LPAR    &kp RPAR  &trans &trans &trans &kp N1 &kp N2 &kp N3 &trans &trans
-                                  &trans          &trans      &trans    &trans &trans &kp N0 &trans &kp DOT
+                  &trans    &trans   &trans          &trans      &trans                  &trans &trans &trans &trans &trans 
+        &trans    &trans    &trans   &kp LC(LS(TAB)) &kp LC(TAB) &trans    &trans &trans &trans &kp N7 &kp N8 &kp N9 &trans &trans
+        &kp GRAVE &kp EXCL  &kp AT   &kp HASH        &kp DLLR    &kp PRCNT &trans &trans &trans &kp N4 &kp N5 &kp N6 &trans &kp TILDE
+        &trans    &kp CARET &kp AMPS &kp STAR        &kp LPAR    &kp RPAR  &trans &trans &trans &kp N1 &kp N2 &kp N3 &trans &trans
+                                     &trans          &trans      &trans    &trans &trans &kp N0 &trans &kp DOT
       >;
     };
 
