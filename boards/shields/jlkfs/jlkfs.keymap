@@ -6,6 +6,7 @@
 #define L_DEFAULT 0
 #define L_BT      1
 #define L_NUMBER  2
+#define L_NUMPAD  3
 
 &lt {
   tapping-term-ms = <150>;
@@ -74,7 +75,7 @@
         &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP  &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
         &kp FSLH &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN  &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
         &kp BSLH &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC   &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
-        &kp DOWN &mt LCMD UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_NUMBER ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
+        &kp DOWN &mt LCMD UP &mt LSHIFT ESC &lt L_NUMPAD TAB &mt LCTRL ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
       >;
     };
 
@@ -95,6 +96,16 @@
         &kp LPAR  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &trans    &kp K_VOL_UP &kp N6    &kp N7   &kp N8          &kp N9      &kp N0   &kp RPAR
         &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &trans    &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR        &kp LPAR    &kp RPAR &kp TILDE
                                   &trans   &trans   &two_tab  &four_tab &trans       &trans    &trans   &trans
+      >;
+    };
+
+    numpad_layer {
+      bindings = <
+               &trans    &trans   &trans          &trans      &trans                  &trans &trans &trans &trans &trans 
+        &trans &trans    &trans   &kp LC(LS(TAB)) &kp LC(TAB) &trans    &trans &trans &trans &kp N7 &kp N8 &kp N9 &trans &trans
+        &trans &kp EXCL  &kp AT   &kp HASH        &kp DLLR    &kp PRCNT &trans &trans &trans &kp N4 &kp N5 &kp N6 &trans &trans
+        &trans &kp CARET &kp AMPS &kp STAR        &kp LPAR    &kp RPAR  &trans &trans &trans &kp N1 &kp N2 &kp N3 &trans &trans
+                                  &trans          &trans      &trans    &trans &trans &kp N0 &trans &kp DOT
       >;
     };
 
