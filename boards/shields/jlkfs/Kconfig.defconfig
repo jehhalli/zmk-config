@@ -1,4 +1,4 @@
-if SHIELD_JLKFS_RIGHT
+if SHIELD_JLKFS_LEFT
 
 config ZMK_KEYBOARD_NAME
   default "jlkfs"
