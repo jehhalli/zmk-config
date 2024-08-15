@@ -75,7 +75,7 @@
         &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP  &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
         &kp FSLH &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN  &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
         &kp BSLH &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC   &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
-        &kp DOWN &mt LCMD UP &mt LSHIFT ESC &lt L_NUMPAD TAB &mt LCTRL ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
+        &kp DOWN &mt LCMD UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_NUMBER ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
       >;
     };
 
@@ -91,11 +91,11 @@
 
     number_layer {
       bindings = <
-                  &trans   &trans &trans   &trans   &trans                           &trans    &trans   &trans          &trans      &trans 
-        &trans    &trans   &trans &trans   &trans   &trans    &trans    &trans       &trans    &trans   &kp LC(LS(TAB)) &kp LC(TAB) &trans   &trans
-        &kp LPAR  &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &trans    &kp K_VOL_UP &kp N6    &kp N7   &kp N8          &kp N9      &kp N0   &kp RPAR
-        &kp GRAVE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &trans    &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR        &kp LPAR    &kp RPAR &kp TILDE
-                                  &trans   &trans   &two_tab  &four_tab &trans       &trans    &trans   &trans
+                  &none    &none  &none    &none    &none                        &none     &none    &none           &none       &none 
+        &none     &none    &none  &none    &none    &none     &none &none        &none     &none    &kp LC(LS(TAB)) &kp LC(TAB) &none    &none
+        &kp GRAVE &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &none &kp K_VOL_UP &kp N6    &kp N7   &kp N8          &kp N9      &kp N0   &kp TILDE
+        &none     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &none &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR        &kp LPAR    &kp RPAR &none
+                                  &none    &none    &none     &none &none        &none     &none    &none
       >;
     };
 
