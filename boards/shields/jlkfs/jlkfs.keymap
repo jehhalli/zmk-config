@@ -5,8 +5,9 @@
 
 #define L_DEFAULT 0
 #define L_BT      1
-#define L_NUMBER  2
-#define L_NUMPAD  3
+#define L_ALT     2
+#define L_NUMBER  3
+#define L_NUMPAD  4
 
 &lt {
   tapping-term-ms = <150>;
@@ -38,6 +39,7 @@
       key-positions = <54 57>;
       bindings = <&caps_word>;
     };
+
   };
 
   //----------------------------------------------------------------------------
@@ -63,6 +65,26 @@
   };
 
   //----------------------------------------------------------------------------
+  // Mod-Morph
+  //----------------------------------------------------------------------------
+
+  behaviors {
+    fslhgrave: fslash_grave {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp FSLH>, <&kp GRAVE>;
+      mods = <(MOD_LALT)>;
+    };
+
+    minustilde: minus_tilde {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp MINUS>, <&kp TILDE>;
+      mods = <(MOD_LALT)>;
+    };
+  };
+
+  //----------------------------------------------------------------------------
   // Keymap
   //----------------------------------------------------------------------------
 
@@ -71,11 +93,11 @@
 
     default_layer {
       bindings = <
-                 &kp N1   &kp N2    &kp N3  &kp N4 &kp N5                         &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-        &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP  &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
-        &kp FSLH &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN  &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
-        &kp BSLH &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC   &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
-        &kp DOWN &mt LCMD UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_NUMBER ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
+                      &kp N1   &kp N2    &kp N3  &kp N4 &kp N5                         &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+        &kp LBKT      &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP  &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
+        &fslash_grave &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN  &kp D  &kp H  &kp T  &kp N  &kp S  &minus_tilde
+        &kp BSLH      &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC   &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
+        &kp DOWN &mt LCMD UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_ALT ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
       >;
     };
 
@@ -86,6 +108,16 @@
         &none  &bt BT_SEL 0   &bt BT_SEL 1  &none  &none  &none  &none   &none   &none  &out OUT_BLE &out OUT_USB &none  &none  &none
         &none  &bt BT_DISC 0  &bt BT_DISC 1 &none  &none  &none  &none   &none   &none  &none        &none        &none  &none  &none
                                             &none  &none  &none  &none   &none   &none  &none        &none
+      >;
+    };
+
+    alt_layer {
+      bindings = <
+                  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                     &trans &trans          &trans      &trans &trans
+        &trans    &trans   &trans &trans   &trans   &trans    &trans &trans       &trans &trans          &trans      &trans &trans &trans
+        &trans    &trans   &trans &trans   &trans   &trans    &trans &kp K_VOL_UP &trans &kp LC(LS(TAB)) &kp LC(TAB) &trans &trans &trans
+        &trans    &trans   &trans &trans   &trans   &trans    &trans &kp K_VOL_DN &trans &trans          &trans      &trans &trans &trans
+                                  &trans   &trans   &trans    &trans &trans       &trans &trans          &trans
       >;
     };
 
