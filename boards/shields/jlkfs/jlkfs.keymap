@@ -25,22 +25,6 @@
 / {
 
   //----------------------------------------------------------------------------
-  // Combos
-  //----------------------------------------------------------------------------
-
-  combos {
-    compatible = "zmk,combos";
-
-    combo_caps_word {
-      timeout-ms = <30>;
-      layers = <L_DEFAULT>;
-      key-positions = <54 57>;
-      bindings = <&caps_word>;
-    };
-
-  };
-
-  //----------------------------------------------------------------------------
   // Keymap
   //----------------------------------------------------------------------------
 
@@ -69,11 +53,11 @@
 
     alt_layer {
       bindings = <
-               &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT                     &trans &trans          &trans      &trans &trans
-        &trans &trans    &trans &trans   &trans   &trans    &trans &trans       &trans &trans          &trans      &trans &trans    &trans
-        &trans &kp GRAVE &trans &trans   &trans   &trans    &trans &kp K_VOL_UP &trans &kp LC(LS(TAB)) &kp LC(TAB) &trans &kp TILDE &trans
-        &trans &trans    &trans &trans   &trans   &trans    &trans &kp K_VOL_DN &trans &trans          &trans      &trans &trans    &trans
-                                &trans   &trans   &trans    &trans &trans       &trans &trans          &trans
+               &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT                         &trans &trans          &trans      &trans &trans
+        &trans &trans    &trans &trans   &trans   &trans    &trans     &trans       &trans &trans          &trans      &trans &trans    &trans
+        &trans &kp GRAVE &trans &trans   &trans   &trans    &trans     &kp K_VOL_UP &trans &kp LC(LS(TAB)) &kp LC(TAB) &trans &kp TILDE &trans
+        &trans &trans    &trans &trans   &trans   &trans    &trans     &kp K_VOL_DN &trans &trans          &trans      &trans &trans    &trans
+                                &trans   &trans   &trans    &caps_word &trans       &trans &trans          &trans
       >;
     };
 
