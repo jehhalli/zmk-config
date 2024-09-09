@@ -53,11 +53,11 @@
 
     alt_layer {
       bindings = <
-               &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT                         &trans &trans          &trans      &trans &trans
-        &trans &trans    &trans &trans   &trans   &trans    &trans     &trans       &trans &trans          &trans      &trans &trans    &trans
-        &trans &kp GRAVE &trans &trans   &trans   &trans    &trans     &kp K_VOL_UP &trans &kp LC(LS(TAB)) &kp LC(TAB) &trans &kp TILDE &trans
-        &trans &trans    &trans &trans   &trans   &trans    &trans     &kp K_VOL_DN &trans &trans          &trans      &trans &trans    &trans
-                                &trans   &trans   &trans    &caps_word &trans       &trans &trans          &trans
+                  &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT                         &none &none           &none       &none &none
+        &kp LBRC  &none     &none  &none    &none    &none     &none      &none        &none &none           &none       &none &none     &none
+        &kp QMARK &kp GRAVE &none  &none    &none    &none     &none      &kp K_VOL_UP &none &kp LC(LS(TAB)) &kp LC(TAB) &none &kp TILDE &none
+        &kp PIPE  &none     &none  &none    &none    &none     &none      &kp K_VOL_DN &none &none           &none       &none &none     &none
+                                   &none    &none    &none     &caps_word &none        &none &none           &none
       >;
     };
 
