@@ -33,10 +33,10 @@
 
     default_layer {
       bindings = <
-                 &kp N1   &kp N2    &kp N3  &kp N4 &kp N5                         &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-        &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &kp HOME     &kp PG_UP  &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
-        &kp FSLH &kp A    &kp O     &kp E   &kp U  &kp I  &kp END      &kp PG_DN  &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
-        &kp BSLH &kp SEMI &kp Q     &kp J   &kp K  &kp X  &lt L_BT DEL &kp BSPC   &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
+                 &kp N1   &kp N2    &kp N3  &kp N4 &kp N5                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+        &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P  &kp Y  &mo L_BT  &none      &kp F  &kp G  &kp C  &kp R  &kp L  &kp RBKT
+        &kp FSLH &kp A    &kp O     &kp E   &kp U  &kp I  &kp PG_UP &kp DEL    &kp D  &kp H  &kp T  &kp N  &kp S  &kp MINUS
+        &kp BSLH &kp SEMI &kp Q     &kp J   &kp K  &kp X  &kp PG_DN &kp BSPC   &kp B  &kp M  &kp W  &kp V  &kp Z  &kp EQUAL
         &kp DOWN &mt LCMD UP &mt LSHIFT ESC &mt LCTRL TAB &lt L_HELP ENTER &kp SPACE &mt LALT LEFT &kp RIGHT
       >;
     };
@@ -55,8 +55,8 @@
       bindings = <
                   &kp EXCL  &kp AT &kp HASH &kp DLLR &kp PRCNT                         &none &none           &none       &none &none
         &kp LBRC  &none     &none  &none    &none    &none     &none      &none        &none &none           &none       &none &none     &none
-        &kp QMARK &kp GRAVE &none  &none    &none    &none     &none      &kp K_VOL_UP &none &kp LC(LS(TAB)) &kp LC(TAB) &none &kp TILDE &none
-        &kp PIPE  &none     &none  &none    &none    &none     &none      &kp K_VOL_DN &none &none           &none       &none &none     &none
+        &kp QMARK &kp GRAVE &none  &none    &none    &none     &kp HOME   &kp K_VOL_UP &none &kp LC(LS(TAB)) &kp LC(TAB) &none &kp TILDE &none
+        &kp PIPE  &none     &none  &none    &none    &none     &kp END    &kp K_VOL_DN &none &none           &none       &none &none     &none
                                    &none    &none    &none     &caps_word &none        &none &none           &none
       >;
     };
