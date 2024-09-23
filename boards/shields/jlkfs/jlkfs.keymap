@@ -64,11 +64,11 @@
 
     help1_layer {
       bindings = <
-                  &none    &none  &none    &none     &none                             &none     &none    &none           &none       &none
-        &kp LBRC  &none    &none  &none    &kp GRAVE &kp TILDE &none      &none        &none     &none    &kp LC(LS(TAB)) &kp LC(TAB) &none    &none
-        &kp QMARK &kp N1   &kp N2 &kp N3   &kp N4    &kp N5    &kp HOME   &kp K_VOL_UP &kp N6    &kp N7   &kp N8          &kp N9      &kp N0   &none
-        &kp PIPE  &kp EXCL &kp AT &kp HASH &kp DLLR  &kp PRCNT &kp END    &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR        &kp LPAR    &kp RPAR &none
-                                  &none    &none     &none     &caps_word &none        &none     &none    &none
+                  &none    &none  &none     &none     &none                             &none     &none    &none    &none    &none
+        &kp LBRC  &none    &none  &kp GRAVE &kp TILDE &none     &none      &none        &none     &none    &none    &none    &none    &none
+        &kp QMARK &kp N1   &kp N2 &kp N3    &kp N4    &kp N5    &kp HOME   &kp K_VOL_UP &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &none
+        &kp PIPE  &kp EXCL &kp AT &kp HASH  &kp DLLR  &kp PRCNT &kp END    &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
+        &kp LC(LS(TAB)) &kp LC(TAB) &none &caps_word &none &none &none &none
       >;
     };
 
