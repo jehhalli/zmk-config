@@ -31,21 +31,23 @@
 
   combos {
     compatible = "zmk,combos";
-    combo-term-ms = <30>;
 
     combo_ctrl {
+      timeout-ms = <30>;
       layers = <L_DEFAULT>;
       key-positions = <27 28>;
       bindings = <&sk LCTRL>;
     };
 
     combo_alt {
+      timeout-ms = <30>;
       layers = <L_DEFAULT>;
       key-positions = <33 34>;
       bindings = <&sk LALT>;
     };
 
     combo_cmd {
+      timeout-ms = <30>;
       layers = <L_DEFAULT>;
       key-positions = <41 42>;
       bindings = <&sk LCMD>;
