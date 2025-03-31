@@ -68,19 +68,11 @@
 
     default_layer {
       bindings = <
-<<<<<<< Updated upstream
-                 &none    &none     &none   &none &none                      &none &none &none &none &none
-        &kp LBKT &kp SQT  &kp COMMA &kp DOT &kp P &kp Y &mo L_BT    &none    &kp F &kp G &kp C &kp R &kp L &kp RBKT
-        &kp FSLH &kp A    &kp O     &kp E   &kp U &kp I &mo L_MOUSE &kp DEL  &kp D &kp H &kp T &kp N &kp S &kp MINUS
-        &kp BSLH &kp SEMI &kp Q     &kp J   &kp K &kp X &kp BSPC    &kp BSPC &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
-        &none &none &mt LSHIFT ESC &lt L_NAV TAB &lt L_NUM ENTER &kp SPACE &none &none
-=======
                        &none    &none     &none         &none &none                   &none &none &none &none &none
         &kp LBKT       &kp SQT  &kp COMMA &lt L_NAV DOT &kp P &kp Y &mo L_BT &none    &kp F &kp G &kp C &kp R &kp L &kp RBKT
         &mt LCTRL FSLH &kp A    &kp O     &kp E         &kp U &kp I &kp PGUP &kp DEL  &kp D &kp H &kp T &kp N &kp S &mt RCTRL MINUS
         &mt LCMD BSLH  &kp SEMI &kp Q     &kp J         &kp K &kp X &kp PGDN &kp BSPC &kp B &kp M &kp W &kp V &kp Z &mt RCMD  EQUAL
         &none &none &mt LSHIFT ESC &mt LALT TAB &lt L_NUM ENTER &kp SPACE &none &none
->>>>>>> Stashed changes
       >;
     };
 
