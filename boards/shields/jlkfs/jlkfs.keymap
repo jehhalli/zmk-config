@@ -34,10 +34,10 @@
 
     default_layer {
       bindings = <
-                       &none    &none     &none   &none &none                   &none &none &none &none &none
-        &kp LBKT       &kp SQT  &kp COMMA &kp DOT &kp P &kp Y &mo L_BT &none    &kp F &kp G &kp C &kp R &kp L &kp RBKT
-        &mt LCTRL FSLH &kp A    &kp O     &kp E   &kp U &kp I &kp PGUP &kp DEL  &kp D &kp H &kp T &kp N &kp S &mt RCTRL MINUS
-        &mt LCMD BSLH  &kp SEMI &kp Q     &kp J   &kp K &kp X &kp PGDN &kp BSPC &kp B &kp M &kp W &kp V &kp Z &mt RCMD  EQUAL
+                       &none    &none     &none   &none &none                    &none &none &none &none &none
+        &kp LBKT       &kp SQT  &kp COMMA &kp DOT &kp P &kp Y &mo L_BT &kp GRAVE &kp F &kp G &kp C &kp R &kp L &kp RBKT
+        &mt LCTRL FSLH &kp A    &kp O     &kp E   &kp U &kp I &kp PGUP &kp DEL   &kp D &kp H &kp T &kp N &kp S &mt RCTRL MINUS
+        &mt LCMD BSLH  &kp SEMI &kp Q     &kp J   &kp K &kp X &kp PGDN &kp BSPC  &kp B &kp M &kp W &kp V &kp Z &mt RCMD  EQUAL
         &kp DOWN &kp UP &mt LSHIFT ESC &mt LALT TAB &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
       >;
     };
@@ -56,8 +56,8 @@
       bindings = <
                   &none    &none  &none    &none    &none                           &none     &none           &none       &none    &none
         &kp LBRC  &none    &none  &none    &none    &none     &none    &none        &none     &kp LC(LS(TAB)) &kp LC(TAB) &none    &none    &kp RBRC
-        &kp TILDE &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &kp HOME &kp K_VOL_UP &kp N6    &kp N7          &kp N8      &kp N9   &kp N0   &kp GRAVE
-        &none     &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp END  &kp K_VOL_DN &kp CARET &kp AMPS        &kp STAR    &kp LPAR &kp RPAR &none
+        &kp QMARK &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &kp HOME &kp K_VOL_UP &kp N6    &kp N7          &kp N8      &kp N9   &kp N0   &kp UNDER
+        &kp PIPE  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp END  &kp K_VOL_DN &kp CARET &kp AMPS        &kp STAR    &kp LPAR &kp RPAR &kp PLUS
         &none &none &none &caps_word &none &none &none &none
       >;
     };
