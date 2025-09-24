@@ -7,7 +7,6 @@
 #define L_DEFAULT 0
 #define L_BT      1
 #define L_NUM     2
-#define L_SC      3
 
 &lt {
   tapping-term-ms = <150>;
@@ -35,41 +34,58 @@
 
     default_layer {
       bindings = <
-                       &none    &none          &none   &none &none                    &none &none &none &none &none
-        &kp LBKT       &kp SQT  &lt L_SC COMMA &kp DOT &kp P &kp Y &mo L_BT &kp GRAVE &kp F &kp G &kp C &kp R &kp L &kp RBKT
-        &mt LCTRL FSLH &kp A    &kp O          &kp E   &kp U &kp I &kp PGUP &kp DEL   &kp D &kp H &kp T &kp N &kp S &kp MINUS
-        &mt LCMD BSLH  &kp SEMI &kp Q          &kp J   &kp K &kp X &kp PGDN &kp BSPC  &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
-        &kp DOWN &kp UP &mt LSHIFT ESC &mt LALT TAB &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
+        &kp GRAVE &none &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(SPACE))
+        &none &kp LC(LS(LEFT)) &kp LC(LS(RIGHT)) &none &kp BSPC
+        
+        &kp LBKT &kp SQT &kp COMMA &kp DOT &kp P &kp Y &mo L_BT
+        &none &kp F &kp G &kp C &kp R &kp L &kp RBKT
+        
+        &mt LCTRL FSLH &kp A &kp O &kp E &kp U &kp I &kp PGUP
+        &none &kp D &kp H &kp T &kp N &kp S &kp MINUS
+        
+        &mt LCMD BSLH &kp SEMI &kp Q &kp J &kp K &kp X &kp PGDN
+        &kp BSPC &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
+        
+        &kp DOWN &kp UP &mt LSHIFT ESC &mt LALT TAB
+        &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
       >;
     };
 
     bluetooth_layer {
       bindings = <
-               &kp F1         &kp F2        &kp F3 &kp F4 &kp F5                 &kp F6 &kp F7       &kp F8       &kp F9 &kp F10
-        &none  &bt BT_CLR_ALL &none         &none  &none  &none  &kp F11 &kp F12 &none  &none        &none        &none  &none  &none
-        &none  &bt BT_SEL 0   &bt BT_SEL 1  &none  &none  &none  &none   &none   &none  &out OUT_BLE &out OUT_USB &none  &none  &none
-        &none  &bt BT_DISC 0  &bt BT_DISC 1 &none  &none  &none  &none   &none   &none  &none        &none        &none  &none  &none
-                                            &none  &none  &none  &none   &none   &none  &none        &none
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5
+        &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
+
+        &none &bt BT_CLR_ALL &none &none &none &none &kp F11
+        &kp F12 &none &none &none &none &none &none
+
+        &none &bt BT_SEL 0 &bt BT_SEL 1 &none &none &none &none
+        &none &none &out OUT_BLE &out OUT_USB &none &none &none
+
+        &none &bt BT_DISC 0 &bt BT_DISC 1 &none &none &none &none
+        &none &none &none &none &none &none &none
+
+        &none &none &none &none
+        &none &none &none &none
       >;
     };
 
     num_layer {
       bindings = <
-                  &none    &none  &none    &none    &none                           &none     &none           &none       &none    &none
-        &kp LBRC  &none    &trans &trans   &none    &none     &none    &none        &none     &kp LC(LS(TAB)) &kp LC(TAB) &none    &none    &kp RBRC
-        &kp QMARK &kp N1   &kp N2 &kp N3   &kp N4   &kp N5    &kp HOME &kp K_VOL_UP &kp N6    &kp N7          &kp N8      &kp N9   &kp N0   &kp UNDER
-        &kp PIPE  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp END  &kp K_VOL_DN &kp CARET &kp AMPS        &kp STAR    &kp LPAR &kp RPAR &kp PLUS
-        &none &none &none &caps_word &none &none &none &none
-      >;
-    };
+        &kp TILDE &none &none &none &none
+        &none &none &none &none &kp DEL
 
-    shortcut_layer {
-      bindings = <
-              &none &none &none &none &none             &none &none            &none             &none             &none
-        &none &none &none &none &none &none &none &none &none &kp LC(LS(TAB))  &kp LC(LS(UP))    &kp LC(TAB)       &kp LC(LG(Q)) &none
-        &none &none &none &none &none &none &none &none &none &kp LC(LS(LEFT)) &kp LC(LS(DOWN))  &kp LC(LS(RIGHT)) &none &none
-        &none &none &none &none &none &none &none &none &none &none            &kp LC(LS(SPACE)) &none             &none &none
-        &none &none &none &none &none &trans &none &none
+        &kp LBRC &none &trans &trans &none &none &none
+        &kp LC(LG(Q)) &none &kp LC(LS(TAB)) &kp LC(TAB) &none &none &kp RBRC
+
+        &kp QMARK &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp HOME
+        &kp K_VOL_UP &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp UNDER
+
+        &kp PIPE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp END
+        &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp PLUS
+
+        &none &none &none &caps_word
+        &none &none &none &none
       >;
     };
 
