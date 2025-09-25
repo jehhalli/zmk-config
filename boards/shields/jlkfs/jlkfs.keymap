@@ -36,16 +36,16 @@
       bindings = <
         &kp GRAVE &none &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(SPACE))
         &none &kp LC(LS(LEFT)) &kp LC(LS(RIGHT)) &none &kp BSPC
-        
+
         &kp LBKT &kp SQT &kp COMMA &kp DOT &kp P &kp Y &mo L_BT
         &none &kp F &kp G &kp C &kp R &kp L &kp RBKT
-        
+
         &mt LCTRL FSLH &kp A &kp O &kp E &kp U &kp I &kp PGUP
         &none &kp D &kp H &kp T &kp N &kp S &kp MINUS
-        
+
         &mt LCMD BSLH &kp SEMI &kp Q &kp J &kp K &kp X &kp PGDN
         &kp BSPC &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
-        
+
         &kp DOWN &kp UP &mt LSHIFT ESC &mt LALT TAB
         &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
       >;
