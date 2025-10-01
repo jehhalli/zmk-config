@@ -38,7 +38,7 @@
 
     default_layer {
       bindings = <
-        &kp GRAVE &kp LC(DOWN) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(SPACE))
+        &kp GRAVE &kp LC(UP) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(SPACE))
         &none &kp LC(LS(LEFT)) &kp LC(LS(RIGHT)) &kp LG(TAB) &kp LA(BSPC)
 
         &kp TAB &kp SQT &kp COMMA &kp DOT &kp P &kp Y &kp LBKT
