@@ -23,10 +23,6 @@
   quick-release;
 };
 
-&sl {
-  release-after-ms = <750>;
-};
-
 / {
 
   //----------------------------------------------------------------------------
@@ -51,7 +47,7 @@
         &kp EQUAL &kp B &kp M &kp W &kp V &kp Z &sk LALT
 
         &kp DOWN &kp UP &sk LSHIFT &sk LGUI
-        &sl L_NUM &kp SPACE &kp LEFT &kp RIGHT
+        &mo L_NUM &kp SPACE &kp LEFT &kp RIGHT
       >;
     };
 
