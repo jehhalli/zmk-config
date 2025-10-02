@@ -8,6 +8,10 @@
 #define L_NUM     1
 #define L_BT      2
 
+//------------------------------------------------------------------------------
+// Defaults
+//------------------------------------------------------------------------------
+
 &lt {
   tapping-term-ms = <150>;
   flavor = "hold-preferred";
@@ -23,11 +27,29 @@
   quick-release;
 };
 
-/ {
+//------------------------------------------------------------------------------
+// Behaviors
+//------------------------------------------------------------------------------
 
-  //----------------------------------------------------------------------------
-  // Keymap
-  //----------------------------------------------------------------------------
+/ {
+  behaviors {
+    ba: balanced_tap {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "balanced";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&kp>;
+      display-name = "Balanced-Tap";
+    };
+  };
+};
+
+//------------------------------------------------------------------------------
+// Keymap
+//------------------------------------------------------------------------------
+
+
+/ {
 
   keymap {
     compatible = "zmk,keymap";
@@ -43,8 +65,8 @@
         &kp FSLH &kp A &kp O &kp E &kp U &kp I &kp LBKT
         &kp RBKT &kp D &kp H &kp T &kp N &kp S &kp MINUS
 
-        &mt LCTRL BSLH &kp SEMI &kp Q &kp J &kp K &kp X &none
-        &none &kp B &kp M &kp W &kp V &kp Z &mt LALT EQUAL
+        &kp BSLH &ba LCTRL SEMI &kp Q &kp J &kp K &kp X &none
+        &sk LALT &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
         &kp DOWN &kp UP &mt LSHIFT ESC &mt LGUI TAB
         &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
