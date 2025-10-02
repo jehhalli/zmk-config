@@ -66,7 +66,7 @@
         &kp RBKT &kp D &kp H &kp T &kp N &kp S &kp MINUS
 
         &kp BSLH &ba LCTRL SEMI &kp Q &kp J &kp K &kp X &none
-        &sk LALT &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
+        &kp LALT &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
         &kp DOWN &kp UP &mt LSHIFT ESC &mt LGUI TAB
         &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
