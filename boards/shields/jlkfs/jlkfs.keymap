@@ -5,8 +5,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define L_DEFAULT 0
-#define L_BT      1
-#define L_NUM     2
+#define L_NUM     1
+#define L_BT      2
+
+//------------------------------------------------------------------------------
+// Defaults
+//------------------------------------------------------------------------------
 
 &lt {
   tapping-term-ms = <150>;
@@ -23,31 +27,68 @@
   quick-release;
 };
 
-/ {
+//------------------------------------------------------------------------------
+// Behaviors
+//------------------------------------------------------------------------------
 
-  //----------------------------------------------------------------------------
-  // Keymap
-  //----------------------------------------------------------------------------
+/ {
+  behaviors {
+    ba: balanced_tap {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "balanced";
+      tapping-term-ms = <200>;
+      bindings = <&kp>, <&kp>;
+      display-name = "Balanced-Tap";
+    };
+  };
+};
+
+//------------------------------------------------------------------------------
+// Keymap
+//------------------------------------------------------------------------------
+
+
+/ {
 
   keymap {
     compatible = "zmk,keymap";
 
     default_layer {
       bindings = <
-        &kp GRAVE &none &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(SPACE))
-        &none &kp LC(LS(LEFT)) &kp LC(LS(RIGHT)) &none &kp BSPC
+        &kp DEL &kp LC(UP) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(SPACE))
+        &none &kp LC(LS(LEFT)) &kp LC(LS(RIGHT)) &kp LG(TAB) &kp LA(BSPC)
 
-        &kp LBKT &kp SQT &kp COMMA &kp DOT &kp P &kp Y &mo L_BT
-        &none &kp F &kp G &kp C &kp R &kp L &kp RBKT
+        &kp GRAVE &kp SQT &kp COMMA &kp DOT &kp P &kp Y &mo L_BT
+        &none &kp F &kp G &kp C &kp R &kp L &kp BSPC
 
-        &mt LCTRL FSLH &kp A &kp O &kp E &kp U &kp I &kp PGUP
-        &none &kp D &kp H &kp T &kp N &kp S &kp MINUS
+        &kp FSLH &kp A &kp O &kp E &kp U &kp I &kp LBKT
+        &kp RBKT &kp D &kp H &kp T &kp N &kp S &kp MINUS
 
-        &mt LCMD BSLH &kp SEMI &kp Q &kp J &kp K &kp X &kp PGDN
-        &kp BSPC &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
+        &kp BSLH &ba LCTRL SEMI &kp Q &kp J &kp K &kp X &none
+        &kp LALT &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
-        &kp DOWN &kp UP &mt LSHIFT ESC &mt LALT TAB
+        &kp DOWN &kp UP &mt LSHIFT ESC &mt LGUI TAB
         &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
+      >;
+    };
+
+    num_layer {
+      bindings = <
+        &none &none &none &none &none
+        &none &none &none &none &none
+
+        &none &none &trans &trans &none &none &none
+        &kp LC(LG(Q)) &none &kp LC(LS(TAB)) &kp LC(TAB) &none &none &none
+
+        &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none
+        &kp K_VOL_UP &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
+
+        &none &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &none
+        &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
+
+        &kp PGDN &kp PGUP &none &caps_word
+        &none &none &kp HOME &kp END
       >;
     };
 
@@ -66,25 +107,6 @@
         &none &none &none &none &none &none &none
 
         &none &none &none &none
-        &none &none &none &none
-      >;
-    };
-
-    num_layer {
-      bindings = <
-        &kp TILDE &none &none &none &none
-        &none &none &none &none &kp DEL
-
-        &kp LBRC &none &trans &trans &none &none &none
-        &kp LC(LG(Q)) &none &kp LC(LS(TAB)) &kp LC(TAB) &none &none &kp RBRC
-
-        &kp QMARK &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp HOME
-        &kp K_VOL_UP &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp UNDER
-
-        &kp PIPE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &kp END
-        &kp K_VOL_DN &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp PLUS
-
-        &none &none &none &caps_word
         &none &none &none &none
       >;
     };
