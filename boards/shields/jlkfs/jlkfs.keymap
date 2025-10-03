@@ -6,7 +6,8 @@
 
 #define L_DEFAULT 0
 #define L_NUM     1
-#define L_BT      2
+#define L_SYM     2
+#define L_BT      3
 
 //------------------------------------------------------------------------------
 // Defaults
@@ -37,7 +38,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <200>;
+      tapping-term-ms = <250>;
       bindings = <&kp>, <&kp>;
       display-name = "Balanced-Tap";
     };
@@ -59,16 +60,16 @@
         &kp DEL &kp LC(UP) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(SPACE))
         &none &kp LC(LS(LEFT)) &kp LC(LS(RIGHT)) &kp LG(TAB) &kp LA(BSPC)
 
-        &kp GRAVE &kp SQT &kp COMMA &kp DOT &kp P &kp Y &mo L_BT
-        &none &kp F &kp G &kp C &kp R &kp L &kp BSPC
+        &none &kp SQT &kp COMMA &kp DOT &kp P &kp Y &mo L_BT
+        &none &kp F &kp G &kp C &kp R &kp L &none
 
-        &kp FSLH &kp A &kp O &kp E &kp U &kp I &kp LBKT
-        &kp RBKT &kp D &kp H &kp T &kp N &kp S &kp MINUS
+        &none &kp A &ba LALT O &ba LCTRL E &ba LGUI U &kp I &none
+        &none &kp D &ba LGUI H &ba LCTRL T &ba LALT N &kp S &kp BSPC
 
-        &kp BSLH &ba LCTRL SEMI &kp Q &kp J &kp K &kp X &none
-        &kp LALT &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
+        &none &kp SEMI &kp Q &kp J &kp K &kp X &none
+        &none &kp B &kp M &kp W &kp V &kp Z &none
 
-        &kp DOWN &kp UP &mt LSHIFT ESC &mt LGUI TAB
+        &kp DOWN &kp UP &mt LSHIFT ESC &lt L_SYM TAB
         &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
       >;
     };
@@ -89,6 +90,28 @@
 
         &kp PGDN &kp PGUP &none &caps_word
         &none &none &kp HOME &kp END
+      >;
+    };
+
+    sym_layer {
+      bindings = <
+        &none &none &none &none &none
+        &none &none &none &none &none
+
+        &none &none &none &kp LBRC &kp RBRC &none &none
+        &none &none &kp LBKT &kp RBKT &none &none &none
+
+        &none &kp TILDE &kp GRAVE &kp QMARK &kp FSLH &none &none
+        &none &none &kp MINUS &kp UNDER &none &none &none
+
+        &none &none &none &kp PIPE &kp BSLH &none &none
+        &none &none &kp PLUS &kp EQUAL &none &none &none
+
+        &none &none &none &none &none &none &none
+        &none &none &none &none &none &none &none
+
+        &none &none &none &none
+        &none &none &none &none
       >;
     };
 
