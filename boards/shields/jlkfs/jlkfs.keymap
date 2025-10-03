@@ -107,9 +107,6 @@
         &none &none &none &kp PIPE &kp BSLH &none &none
         &none &none &kp PLUS &kp EQUAL &none &none &none
 
-        &none &none &none &none &none &none &none
-        &none &none &none &none &none &none &none
-
         &none &none &none &none
         &none &none &none &none
       >;
