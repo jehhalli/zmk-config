@@ -37,7 +37,7 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "balanced";
-      tapping-term-ms = <200>;
+      tapping-term-ms = <250>;
       bindings = <&kp>, <&kp>;
       display-name = "Balanced-Tap";
     };
@@ -62,8 +62,8 @@
         &kp GRAVE &kp SQT &kp COMMA &kp DOT &kp P &kp Y &mo L_BT
         &none &kp F &kp G &kp C &kp R &kp L &kp BSPC
 
-        &kp FSLH &kp A &kp O &kp E &kp U &kp I &kp LBKT
-        &kp RBKT &kp D &kp H &kp T &kp N &kp S &kp MINUS
+        &kp FSLH &kp A &kp O &ba LCTRL E &ba LGUI U &kp I &kp LBKT
+        &kp RBKT &kp D &ba LGUI H &ba LCTRL T &kp N &kp S &kp MINUS
 
         &kp BSLH &ba LCTRL SEMI &kp Q &kp J &kp K &kp X &none
         &kp LALT &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
