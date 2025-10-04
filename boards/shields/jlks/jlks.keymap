@@ -34,7 +34,7 @@
       bindings = <&kp BSPC>;
     };
 
-    combo_backspace {
+    combo_delete {
       timeout-ms = <30>;
       layers = <L_DEFAULT>;
       key-positions = <3 13>;
