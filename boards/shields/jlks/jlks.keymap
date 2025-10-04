@@ -66,23 +66,6 @@
       bindings = <&mo>, <&kp>;
       display-name = "Balanced-Layer-Tap";
     };
-
-    ltbs: balanced_layer_tap_spesc {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <1>;
-      flavor = "balanced";
-      tapping-term-ms = <250>;
-      require-prior-idle-ms = <125>;
-      bindings = <&mo>, <&spesc>;
-      display-name = "Balanced-Layer-Tap-Space-Escape";
-    };
-
-    spesc: space_escape {
-      compatible = "zmk,behavior-mod-morph";
-      #binding-cells = <0>;
-      bindings = <&kp SPACE>, <&kp ESC>;
-      mods = <(MOD_LSFT)>;
-    };
   };
 
   //----------------------------------------------------------------------------
@@ -115,7 +98,7 @@
         &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z
 
-        &mt LSHIFT ESC &lt L_SYM TAB &lt L_NUM ENTER &ltbs L_NAV
+        &mt LSHIFT ESC &lt L_SYM TAB &lt L_NUM ENTER &kp SPACE
       >;
     };
 
