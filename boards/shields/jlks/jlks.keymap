@@ -14,8 +14,8 @@
 //------------------------------------------------------------------------------
 
 &lt {
-  tapping-term-ms = <250>;
-  flavor = "balanced";
+  tapping-term-ms = <150>;
+  flavor = "hold-preferred";
 };
 
 / {
@@ -40,13 +40,22 @@
   //----------------------------------------------------------------------------
 
   behaviors {
-    ba: balanced_tap {
+    mtb: balanced_mod_tap {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <250>;
       bindings = <&kp>, <&kp>;
-      display-name = "Balanced-Tap";
+      display-name = "Balanced-Mod-Tap";
+    };
+
+    ltb: balanced_layer_tap {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "balanced";
+      tapping-term-ms = <250>;
+      bindings = <&mo>, <&kp>;
+      display-name = "Balanced-Layer-Tap";
     };
   };
 
@@ -74,8 +83,8 @@
         &kp SQT &kp COMMA &kp DOT &kp P &kp Y
         &kp F &kp G &kp C &kp R &kp L
 
-        &lt L_NAV A &ba LALT O &ba LCTRL E &ba LGUI U &kp I
-        &kp D &ba LGUI H &ba LCTRL T &ba LALT N &kp S
+        &ltb L_NAV A &mtb LALT O &mtb LCTRL E &mtb LGUI U &kp I
+        &kp D &mtb LGUI H &mtb LCTRL T &mtb LALT N &kp S
 
         &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z
