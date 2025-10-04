@@ -30,7 +30,7 @@
     combo_backspace {
       timeout-ms = <30>;
       layers = <L_DEFAULT>;
-      key-positions = <8 18>;
+      key-positions = <6 16>;
       bindings = <&kp BSPC>;
     };
   };
