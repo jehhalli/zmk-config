@@ -6,15 +6,16 @@
 #define L_DEFAULT 0
 #define L_NUM     1
 #define L_SYM     2
-#define L_BT      3
+#define L_NAV     3
+#define L_BT      4
 
 //------------------------------------------------------------------------------
 // Defaults
 //------------------------------------------------------------------------------
 
 &lt {
-  tapping-term-ms = <150>;
-  flavor = "hold-preferred";
+  tapping-term-ms = <250>;
+  flavor = "balanced";
 };
 
 / {
@@ -73,7 +74,7 @@
         &kp SQT &kp COMMA &kp DOT &kp P &kp Y
         &kp F &kp G &kp C &kp R &kp L
 
-        &kp A &ba LALT O &ba LCTRL E &ba LGUI U &kp I
+        &lt L_NAV A &ba LALT O &ba LCTRL E &ba LGUI U &kp I
         &kp D &ba LGUI H &ba LCTRL T &ba LALT N &kp S
 
         &kp SEMI &kp Q &kp J &kp K &kp X
@@ -108,6 +109,21 @@
 
         &none &none &kp PIPE &kp BSLH &none
         &none &kp PLUS &kp EQUAL &none &none
+
+        &none &none &none &none
+      >;
+    };
+
+    nav_layer {
+      bindings = <
+        &none &none &kp PGUP &none &none
+        &none &none &kp UP &none &none
+
+        &none &kp HOME &kp PGDN &kp END &none
+        &none &kp LEFT &kp DOWN &kp RIGHT &none
+
+        &none &none &none &none &none
+        &none &none &none &none &none
 
         &none &none &none &none
       >;
