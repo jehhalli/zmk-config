@@ -52,6 +52,7 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <250>;
+      require-prior-idle-ms = <125>;
       bindings = <&kp>, <&kp>;
       display-name = "Balanced-Mod-Tap";
     };
@@ -61,8 +62,26 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <250>;
+      require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
       display-name = "Balanced-Layer-Tap";
+    };
+
+    ltbs: balanced_layer_tap_spesc {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <1>;
+      flavor = "balanced";
+      tapping-term-ms = <250>;
+      require-prior-idle-ms = <125>;
+      bindings = <&mo>, <&spesc>;
+      display-name = "Balanced-Layer-Tap-Space-Escape";
+    };
+
+    spesc: space_escape {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp SPACE>, <&kp ESC>;
+      mods = <(MOD_LSFT)>;
     };
   };
 
@@ -90,13 +109,13 @@
         &kp SQT &kp COMMA &kp DOT &kp P &kp Y
         &kp F &kp G &kp C &kp R &kp L
 
-        &ltb L_NAV A &mtb LALT O &mtb LCTRL E &mtb LGUI U &kp I
+        &kp A &mtb LALT O &mtb LCTRL E &mtb LGUI U &kp I
         &kp D &mtb LGUI H &mtb LCTRL T &mtb LALT N &kp S
 
         &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z
 
-        &mt LSHIFT ESC &lt L_SYM TAB &lt L_NUM ENTER &kp SPACE
+        &mt LSHIFT ESC &lt L_SYM TAB &lt L_NUM ENTER &ltbs L_NAV
       >;
     };
 
@@ -132,13 +151,13 @@
 
     nav_layer {
       bindings = <
-        &none &none &kp PGUP &kp LC(UP) &kp LC(LG(Q))
-        &none &none &kp UP &none &none
+        &trans &trans &trans &trans &trans
+        &none &kp HOME &kp PGDN &kp PGUP &kp END
 
-        &none &kp HOME &kp PGDN &kp END &none
-        &kp LA(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LA(RIGHT)
+        &trans &trans &trans &trans &trans
+        &none &kp LEFT &kp DOWN &kp UP &kp RIGHT
 
-        &none &none &none &none &none
+        &trans &trans &trans &trans &trans
         &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT))
 
         &none &none &none &none
