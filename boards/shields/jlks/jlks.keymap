@@ -122,7 +122,7 @@
         &none &none &kp LBRC &kp RBRC &none
         &none &kp LBKT &kp RBKT &none &none
 
-        &kp TILDE &kp GRAVE &kp QMARK &kp FSLH &none
+        &kp TILDE &kp GRAVE &kp QMARK &kp FSLH &kp LC(UP)
         &none &kp MINUS &kp UNDER &none &none
 
         &none &none &kp PIPE &kp BSLH &none
@@ -135,7 +135,7 @@
     nav_layer {
       bindings = <
         &trans &trans &trans &trans &trans
-        &none &kp HOME &kp PGDN &kp PGUP &kp END
+        &kp LC(LG(Q)) &kp HOME &kp PGDN &kp PGUP &kp END
 
         &trans &trans &trans &trans &trans
         &none &kp LEFT &kp DOWN &kp UP &kp RIGHT
