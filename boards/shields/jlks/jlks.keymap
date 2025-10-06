@@ -27,28 +27,6 @@
 / {
 
   //----------------------------------------------------------------------------
-  // Combos
-  //----------------------------------------------------------------------------
-
-  combos {
-    compatible = "zmk,combos";
-
-    combo_backspace {
-      timeout-ms = <30>;
-      layers = <L_DEFAULT>;
-      key-positions = <6 16>;
-      bindings = <&kp BSPC>;
-    };
-
-    combo_delete {
-      timeout-ms = <30>;
-      layers = <L_DEFAULT>;
-      key-positions = <3 13>;
-      bindings = <&kp DEL>;
-    };
-  };
-
-  //----------------------------------------------------------------------------
   // Behaviors
   //----------------------------------------------------------------------------
 
@@ -127,7 +105,7 @@
 
     sym_layer {
       bindings = <
-        &none &none &kp LBRC &kp RBRC &none
+        &none &none &kp LBRC &kp RBRC &kp LC(LG(Q))
         &none &kp LBKT &kp RBKT &none &none
 
         &kp TILDE &kp GRAVE &kp QMARK &kp FSLH &kp LC(UP)
@@ -143,7 +121,7 @@
     nav_layer {
       bindings = <
         &trans &trans &trans &trans &trans
-        &kp LC(LG(Q)) &kp HOME &kp PGDN &kp PGUP &kp END
+        &none &kp HOME &kp PGDN &kp PGUP &kp END
 
         &trans &trans &trans &trans &trans
         &none &kp LEFT &kp DOWN &kp UP &kp RIGHT
