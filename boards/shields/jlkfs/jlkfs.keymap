@@ -115,7 +115,7 @@
         &none &none &none &none &none
         &none &none &none &none &none
 
-        &none &none &none &kp LBRC &kp RBRC &none &none
+        &none &none &none &kp LBRC &kp RBRC &kp LC(LG(Q)) &none
         &none &none &kp LBKT &kp RBKT &none &none &none
 
         &none &kp TILDE &kp GRAVE &kp QMARK &kp FSLH &kp LC(UP) &none
@@ -135,7 +135,7 @@
         &none &none &none &none &none
 
         &none &trans &trans &trans &trans &trans &none
-        &none &kp LC(LG(Q)) &kp HOME &kp PGDN &kp PGUP &kp END &none
+        &none &none &kp HOME &kp PGDN &kp PGUP &kp END &none
 
         &none &trans &trans &trans &trans &trans &none
         &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
