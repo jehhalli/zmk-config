@@ -106,7 +106,7 @@
         &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z
 
-        &mt LSHIFT ESC &lt L_SYM TAB &lt L_NUM ENTER &ltb L_NAV SPACE
+        &mt LSHIFT BSPC &lt L_SYM TAB &lt L_NUM ENTER &ltb L_NAV SPACE
       >;
     };
 
@@ -151,7 +151,7 @@
         &trans &trans &trans &trans &trans
         &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT))
 
-        &none &none &none &none
+        &kp ESC &kp DEL &none &none
       >;
     };
 

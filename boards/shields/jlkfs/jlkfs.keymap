@@ -143,7 +143,7 @@
         &none &trans &trans &trans &trans &trans &none
         &none &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &none
 
-        &none &none &kp ESC &none
+        &none &none &kp ESC &kp DEL
         &none &none &none &none
       >;
     };
