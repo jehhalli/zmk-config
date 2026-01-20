@@ -5,9 +5,8 @@
 
 #define L_DEFAULT 0
 #define L_NUM     1
-#define L_SYM     2
-#define L_NAV     3
-#define L_BT      4
+#define L_NAV     2
+#define L_BT      3
 
 //------------------------------------------------------------------------------
 // Defaults
@@ -60,7 +59,7 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
     tri_layer {
-      if-layers = <L_NUM L_SYM>;
+      if-layers = <L_NUM L_NAV>;
       then-layer = <L_BT>;
     };
   };
@@ -74,20 +73,20 @@
 
     default_layer {
       bindings = <
-        &none &none &none &none &none
-        &none &none &none &none &none
+        &kp GRAVE &none &none &none &none
+        &kp DEL &none &none &none &kp BSPC
 
-        &none &kp SQT &kp COMMA &kp DOT &kp P &kp Y &none
-        &none &kp F &kp G &kp C &kp R &kp L &none
+        &kp LBKT &kp SQT &kp COMMA &kp DOT &kp P &kp Y &none
+        &none &kp F &kp G &kp C &kp R &kp L &kp RBKT
 
-        &none &kp A &mtb LALT O &mtb LCTRL E &mtb LGUI U &kp I &none
-        &none &kp D &mtb LGUI H &mtb LCTRL T &mtb LALT N &kp S &none
+        &kp FSLH &kp A &mtb LALT O &mtb LCTRL E &mtb LGUI U &kp I &none
+        &none &kp D &mtb LGUI H &mtb LCTRL T &mtb LALT N &kp S &kp MINUS
 
-        &none &kp SEMI &kp Q &kp J &kp K &kp X &none
-        &none &kp B &kp M &kp W &kp V &kp Z &none
+        &kp BSLH &kp SEMI &kp Q &kp J &kp K &kp X &none
+        &none &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
-        &none &none &mt LSHIFT BSPC &lt L_SYM TAB
-        &lt L_NUM ENTER &ltb L_NAV SPACE &none &none
+        &kp DOWN &kp UP &mt LSHIFT ESC &lt L_NAV TAB
+        &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
       >;
     };
 
@@ -105,27 +104,8 @@
         &none &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &none
         &none &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
 
-        &none &none &none &caps_word
-        &none &none &none &none
-      >;
-    };
-
-    sym_layer {
-      bindings = <
-        &none &none &none &none &none
-        &none &none &none &none &none
-
-        &none &none &none &kp LBRC &kp RBRC &kp LC(LG(Q)) &none
-        &none &none &kp LBKT &kp RBKT &none &none &none
-
-        &none &kp TILDE &kp GRAVE &kp QMARK &kp FSLH &kp LC(UP) &none
-        &none &none &kp MINUS &kp UNDER &none &none &none
-
-        &none &none &none &kp PIPE &kp BSLH &none &none
-        &none &none &kp PLUS &kp EQUAL &none &none &none
-
-        &trans &trans &trans &trans
-        &trans &trans &trans &trans
+        &kp PGDN &kp PGUP &trans &caps_word
+        &trans &trans &kp HOME &kp END
       >;
     };
 
@@ -134,17 +114,17 @@
         &none &none &none &none &none
         &none &none &none &none &none
 
-        &none &trans &trans &trans &trans &trans &none
-        &none &none &kp HOME &kp PGDN &kp PGUP &kp END &none
+        &none &kp LC(LG(Q)) &none &none &none &none &none
+        &none &none &none &none &none &none &none
 
-        &none &trans &trans &trans &trans &trans &none
-        &none &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
-
-        &none &trans &trans &trans &trans &trans &none
+        &none &none &none &none &kp LC(UP) &none &none
         &none &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &none
 
-        &none &none &kp ESC &kp DEL
-        &none &none &none &none
+        &none &none &none &none &none &none &none
+        &none &none &none &none &none &none &none
+
+        &kp PGDN &kp PGUP &trans &trans
+        &trans &trans &kp HOME &kp END
       >;
     };
 
