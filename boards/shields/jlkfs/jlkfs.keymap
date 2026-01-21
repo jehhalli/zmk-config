@@ -29,6 +29,7 @@
 //------------------------------------------------------------------------------
 
   behaviors {
+
     mtb: balanced_mod_tap {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -49,6 +50,13 @@
       require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
       display-name = "Balanced-Layer-Tap";
+    };
+
+    bspc_del: backspace_delete {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp BSPC>, <&kp DEL>;
+      mods = <(MOD_LGUI)>;
     };
   };
 
@@ -74,7 +82,7 @@
     default_layer {
       bindings = <
         &kp GRAVE &none &none &none &none
-        &kp DEL &none &none &none &kp BSPC
+        &none &none &none &none &bspc_del
 
         &kp LBKT &kp SQT &kp COMMA &kp DOT &kp P &kp Y &none
         &none &kp F &kp G &kp C &kp R &kp L &kp RBKT
