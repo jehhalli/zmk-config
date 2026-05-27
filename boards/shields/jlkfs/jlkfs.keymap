@@ -87,8 +87,8 @@
         &kp LBKT &kp SQT &kp COMMA &kp DOT &kp P &kp Y &none
         &none &kp F &kp G &kp C &kp R &kp L &kp RBKT
 
-        &kp FSLH &mtb LCTRL A &mtb LALT O &mtb LGUI E &mtb LSHIFT U &kp I &none
-        &none &kp D &mtb LSHIFT H &mtb LGUI T &mtb LALT N &mtb LCTRL S &kp MINUS
+        &mtb LSHIFT FSLH &kp A &mtb LALT O &mtb LCTRL E &mtb LGUI U &kp I &none
+        &none &kp D &mtb LGUI H &mtb LCTRL T &mtb LALT N &kp S &mtb LSHIFT MINUS
 
         &kp BSLH &kp SEMI &kp Q &kp J &kp K &kp X &none
         &none &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
