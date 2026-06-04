@@ -1,0 +1,2 @@
+config SHIELD_JLOL
+  def_bool $(shields_list_contains,jlol)

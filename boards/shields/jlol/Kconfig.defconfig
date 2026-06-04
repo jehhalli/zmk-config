@@ -1,0 +1,15 @@
+if SHIELD_JLOL
+
+config ZMK_KEYBOARD_NAME
+  default "jlol"
+
+config ZMK_SLEEP
+  default n
+
+config ZMK_IDLE_SLEEP_TIMEOUT
+  default 300000
+
+config ZMK_EXT_POWER
+  default n
+
+endif

@@ -24,3 +24,5 @@ include:
     shield: jlkfs_left
   - board: nice_nano//zmk
     shield: jlkfs_right
+  - board: sparkfun_pro_micro_rp2040//zmk
+    shield: jlol
