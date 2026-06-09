@@ -84,9 +84,9 @@
         &none &none &none &none &none &kp DEL
 
         &kp LBRC &kp LC(LG(Q)) &none &none &none &none
-        &none &kp LC(LS(TAB)) &kp LC(TAB) &none &none &none
+        &none &none &none &none &none &none
 
-        &kp QMARK &none &none &none &kp LC(UP) &none
+        &kp QMARK &none &kp LC(LS(TAB)) &kp LC(TAB) &kp LC(UP) &none
         &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &none 
 
         &kp PIPE &none &none &none &none &none
