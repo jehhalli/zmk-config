@@ -4,6 +4,7 @@
 
 #define L_DEFAULT 0
 #define L_NAV     1
+#define L_SHORT   2
 
 //------------------------------------------------------------------------------
 // Defaults
@@ -52,6 +53,21 @@
   };
 
   //----------------------------------------------------------------------------
+  // Combos
+  //----------------------------------------------------------------------------
+
+  combos {
+    compatible = "zmk,combos";
+
+    combo_delete {
+      timeout-ms = <50>;
+      layers = <L_DEFAULT>;
+      key-positions = <11 23>;
+      bindings = <&kp DEL>;
+    };
+  };
+
+  //----------------------------------------------------------------------------
   // Keymap
   //----------------------------------------------------------------------------
 
@@ -72,27 +88,46 @@
         &kp BSLH &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
-        &lt L_NAV DOWN &lt L_NAV UP &lt L_NAV ESC &mt LSHIFT TAB
-        &lt L_NAV ENTER &kp SPACE &lt L_NAV LEFT &lt L_NAV RIGHT
+        &none &none &lt L_NAV ESC &mt LSHIFT TAB
+        &lt L_SHORT ENTER &kp SPACE &none &none
       >;
     };
 
     nav_layer {
       bindings = <
         &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT
-        &none &none &none &none &none &kp DEL
-
-        &kp LBRC &kp LC(LG(Q)) &none &none &none &none
         &none &none &none &none &none &none
 
-        &kp QMARK &none &kp LC(UP) &kp LC(LS(TAB)) &kp LC(TAB) &none
-        &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &none 
+        &kp LBRC &none &none &kp PGUP &none &none
+        &none &none &kp UP &none &none &none
+
+        &kp QMARK &none &kp HOME &kp PGDN &kp END &none
+        &none &kp LEFT &kp DOWN &kp RIGHT &none &none 
 
         &kp PIPE &kp COLON &none &none &none &none
         &none &none &none &none &none &none
 
-        &kp PGDN &kp PGUP &none &caps_word
-        &none &none &kp HOME &kp END
+        &none &none &none &caps_word
+        &none &none &none &none
+      >;
+    };
+
+    shortcut_layer {
+      bindings = <
+        &none &none &none &none &none &none
+        &none &none &none &none &none &none
+
+        &none &kp LC(LG(Q)) &none &none &none &none
+        &none &none &none &none &none &none
+
+        &none &none &kp LC(UP) &kp LC(LS(TAB)) &kp LC(TAB) &none
+        &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &none 
+
+        &none &none &none &none &none &none
+        &none &none &none &none &none &none
+
+        &none &none &none &none
+        &none &none &none &none
       >;
     };
 
