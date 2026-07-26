@@ -89,7 +89,7 @@
         &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
         &none &none &lt L_SHORT ESC &mt LSHIFT TAB
-        &lt L_NAV ENTER &kp SPACE &none &none
+        &kp SPACE &lt L_NAV ENTER &none &none
       >;
     };
 
