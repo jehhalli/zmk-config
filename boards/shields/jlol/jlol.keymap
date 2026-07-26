@@ -88,8 +88,8 @@
         &kp BSLH &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
-        &none &none &lt L_NAV ESC &mt LSHIFT TAB
-        &lt L_SHORT ENTER &kp SPACE &none &none
+        &none &none &lt L_SHORT ESC &mt LSHIFT TAB
+        &lt L_NAV ENTER &kp SPACE &none &none
       >;
     };
 
