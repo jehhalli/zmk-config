@@ -88,8 +88,8 @@
         &kp BSLH &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z &kp EQUAL
 
-        &none &none &mt LSHIFT ESC &lt L_SHORT TAB
-        &lt L_NAV ENTER &kp SPACE &none &none
+        &lt L_NAV DOWN &lt L_NAV UP &mt LSHIFT ESC &lt L_SHORT TAB
+        &lt L_NAV ENTER &kp SPACE &lt L_NAV LEFT &lt L_NAV RIGHT
       >;
     };
 
@@ -107,8 +107,8 @@
         &kp PIPE &kp COLON &none &none &none &none
         &none &none &none &none &none &none
 
-        &none &none &none &caps_word
-        &none &none &none &none
+        &kp PGDN &kp PGUP &none &caps_word
+        &none &none &kp HOME &kp END
       >;
     };
 
