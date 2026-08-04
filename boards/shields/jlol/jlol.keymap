@@ -65,6 +65,13 @@
       key-positions = <11 23>;
       bindings = <&kp DEL>;
     };
+
+    combo_alt_backspace {
+      timeout-ms = <50>;
+      layers = <L_DEFAULT>;
+      key-positions = <10 11>;
+      bindings = <&kp LA(BSPC)>;
+    };
   };
 
   //----------------------------------------------------------------------------
@@ -99,7 +106,7 @@
         &none &none &none &none &none &none
 
         &kp LBRC &none &none &kp PGUP &none &none
-        &none &none &kp UP &none &none &none
+        &none &kp LA(LEFT) &kp UP &kp LA(RIGHT) &none &none
 
         &kp QMARK &none &kp HOME &kp PGDN &kp END &none
         &none &kp LEFT &kp DOWN &kp RIGHT &none &none 
