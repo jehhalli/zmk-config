@@ -72,6 +72,13 @@
       key-positions = <10 11>;
       bindings = <&kp LA(BSPC)>;
     };
+
+    combo_bootloader {
+      timeout-ms = <50>;
+      layers = <L_DEFAULT>;
+      key-positions = <48 49 54 55>;
+      bindings = <&bootloader>;
+    };
   };
 
   //----------------------------------------------------------------------------
