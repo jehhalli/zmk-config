@@ -82,14 +82,12 @@
       bindings = <&bootloader>;
     };
 
-#if CONFIG_ZMK_BLE
     combo_bt_layer {
       timeout-ms = <50>;
       layers = <L_DEFAULT>;
       key-positions = <0 1>;
       bindings = <&mo L_BT >;
     };
-#endif
   };
 
   //----------------------------------------------------------------------------
@@ -156,7 +154,6 @@
       >;
     };
 
-#if CONFIG_ZMK_BLE
     bluetooth_layer {
       bindings = <
         &none &none &none &none &none &none
@@ -175,7 +172,5 @@
         &none &none &none &none
       >;
     };
-#endif
-
   };
 };
