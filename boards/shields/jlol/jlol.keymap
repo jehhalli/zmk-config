@@ -82,8 +82,8 @@
       bindings = <&bootloader>;
     };
 
-#if IS_ENABLED(CONFIG_ZMK_BLE)
-    combo_bootloader {
+#if CONFIG_ZMK_BLE
+    combo_bt_layer {
       timeout-ms = <50>;
       layers = <L_DEFAULT>;
       key-positions = <0 1>;
@@ -156,7 +156,7 @@
       >;
     };
 
-#if IS_ENABLED(CONFIG_ZMK_BLE)
+#if CONFIG_ZMK_BLE
     bluetooth_layer {
       bindings = <
         &none &none &none &none &none &none
