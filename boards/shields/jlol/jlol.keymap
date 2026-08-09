@@ -40,18 +40,6 @@
       bindings = <&kp>, <&kp>;
       display-name = "Balanced-Mod-Tap";
     };
-
-    ltb: balanced_layer_tap {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "balanced";
-      tapping-term-ms = <250>;
-      quick-tap-ms = <300>;
-      require-prior-idle-ms = <125>;
-      bindings = <&mo>, <&kp>;
-      display-name = "Balanced-Layer-Tap";
-    };
-
   };
 
   //----------------------------------------------------------------------------
@@ -64,15 +52,8 @@
     combo_delete {
       timeout-ms = <50>;
       layers = <L_DEFAULT>;
-      key-positions = <11 23>;
-      bindings = <&kp DEL>;
-    };
-
-    combo_alt_backspace {
-      timeout-ms = <50>;
-      layers = <L_DEFAULT>;
       key-positions = <10 11>;
-      bindings = <&kp LA(BSPC)>;
+      bindings = <&kp DEL>;
     };
 
     combo_bootloader {
