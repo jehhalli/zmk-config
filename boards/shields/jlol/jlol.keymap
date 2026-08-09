@@ -103,7 +103,7 @@
         &none &none &none &none &none &none
 
         &kp LBRC &none &none &kp PGUP &none &none
-        &none &kp LA(LEFT) &kp UP &kp LA(RIGHT) &none &none
+        &none &none &kp UP &none &none &none
 
         &kp QMARK &none &kp HOME &kp PGDN &kp END &none
         &none &kp LEFT &kp DOWN &kp RIGHT &none &none 
