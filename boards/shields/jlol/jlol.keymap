@@ -63,6 +63,13 @@
       bindings = <&bootloader>;
     };
 
+    combo_globe {
+      timeout-ms = <50>;
+      layers = <L_DEFAULT>;
+      key-positions = <36 37>;
+      bindings = <&kp GLOBE>;
+    };
+
     combo_bt_layer {
       timeout-ms = <50>;
       layers = <L_DEFAULT>;
