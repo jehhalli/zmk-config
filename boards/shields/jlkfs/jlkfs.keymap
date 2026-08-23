@@ -6,7 +6,8 @@
 #define L_DEFAULT 0
 #define L_NUM     1
 #define L_SYM     2
-#define L_BT      3
+#define L_NAV     3
+#define L_BT      4
 
 //------------------------------------------------------------------------------
 // Defaults
@@ -112,8 +113,8 @@
         &none &kp SEMI &kp Q &kp J &kp K &kp X &none
         &none &kp B &kp M &kp W &kp V &kp Z &none
 
-        &lt L_SYM DOWN &lt L_SYM UP &mt LSHIFT ESC &lt L_SYM TAB
-        &lt L_NUM ENTER &kp SPACE &lt L_SYM LEFT &lt L_SYM RIGHT
+        &none &none &mt LSHIFT ESC &lt L_SYM TAB
+        &lt L_NUM ENTER &ltb L_NAV SPACE &none &none
       >;
     };
 
@@ -150,8 +151,27 @@
         &none &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &kp LC(LS(SPACE)) &none
         &none &kp TILDE &kp FSLH &kp BSLH &kp QMARK &kp PIPE &none
 
-        &kp PGDN &kp PGUP &trans &trans
-        &trans &trans &kp HOME &kp END
+        &none &none &none &none
+        &caps_word &none &none &none
+      >;
+    };
+
+    nav_layer {
+      bindings = <
+        &none &none &none &none &none
+        &none &none &none &none &none
+
+        &none &none &none &none &none &none &none
+        &none &none &none &none &none &none &none
+
+        &none &none &kp HOME &kp PGUP &kp END &none &none
+        &none &none &kp LEFT &kp UP &kp RIGHT &none &none
+
+        &none &none &none &kp PGDN &none &none &none
+        &none &none &none &kp DOWN &none &none &none
+
+        &none &none &none &none
+        &none &none &none &none
       >;
     };
 
