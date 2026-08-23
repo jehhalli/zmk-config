@@ -63,31 +63,28 @@
     compatible = "zmk,combos";
 
     combo_bootloader_l {
-      timeout-ms = <50>;
-      layers = <L_DEFAULT>;
       key-positions = <3 4>;
       bindings = <&bootloader>;
     };
 
     combo_bootloader_r {
-      timeout-ms = <50>;
-      layers = <L_DEFAULT>;
       key-positions = <5 6>;
       bindings = <&bootloader>;
     };
 
     combo_delete {
-      timeout-ms = <50>;
-      layers = <L_DEFAULT>;
-      key-positions = <8 9>;
+      key-positions = <18 19>;
       bindings = <&kp DEL>;
     };
 
     combo_bt_layer {
-      timeout-ms = <50>;
-      layers = <L_DEFAULT>;
       key-positions = <0 1>;
       bindings = <&mo L_BT>;
+    };
+
+    combo_bspc {
+      key-positions = <32 33>;
+      bindings = <&kp BSPC>;
     };
   };
 
