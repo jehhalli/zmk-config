@@ -106,7 +106,7 @@
         &none &kp B &kp M &kp W &kp V &kp Z &none
 
         &none &kp DEL &mt LSHIFT ESC &lt L_SYM TAB
-        &lt L_NUM ENTER &ltb L_NAV SPACE &kp BSPC &kp BSPC
+        &lt L_NUM ENTER &ltb L_NAV SPACE &none &none
       >;
     };
 
@@ -116,13 +116,13 @@
         &none &none &none &none &none
 
         &none &none &trans &trans &none &none &none
-        &none &none &kp LPAR &kp RPAR &none &none &none
+        &none &none &kp BSPC &kp BSPC &none &none &none
 
         &none &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none
         &none &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none
 
         &none &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &none
-        &none &kp CARET &kp AMPS &kp STAR &none &none &none
+        &none &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
 
         &none &none &none &caps_word
         &none &none &none &none
