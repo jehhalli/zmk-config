@@ -72,12 +72,6 @@
       bindings = <&bootloader>;
     };
 
-    combo_escape {
-      timeout-ms = 100
-      key-positions = <12 13>;
-      bindings = <&kp ESC>;
-    };
-
     combo_bt_layer {
       key-positions = <0 1>;
       bindings = <&mo L_BT>;
