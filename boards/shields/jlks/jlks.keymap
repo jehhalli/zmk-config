@@ -63,23 +63,23 @@
     compatible = "zmk,combos";
 
     combo_bootloader_l {
-      key-positions = <3 4>;
+      key-positions = <0 1 2 3>;
       bindings = <&bootloader>;
     };
 
     combo_bootloader_r {
-      key-positions = <5 6>;
+      key-positions = <6 7 8 9>;
       bindings = <&bootloader>;
     };
 
     combo_escape {
       timeout-ms = <100>;
-      key-positions = <12 13>;
+      key-positions = <1 2>;
       bindings = <&kp ESC>;
     };
 
     combo_bt_layer {
-      key-positions = <0 1>;
+      key-positions = <30 33>;
       bindings = <&mo L_BT>;
     };
   };
