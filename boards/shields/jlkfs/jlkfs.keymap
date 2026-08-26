@@ -105,8 +105,8 @@
         &none &kp SEMI &kp Q &kp J &kp K &kp X &none
         &none &kp B &kp M &kp W &kp V &kp Z &none
 
-        &none &none &mt LSHIFT ESC &lt L_SYM TAB
-        &lt L_NUM ENTER &ltb L_NAV SPACE &none &none
+        &none &kp DEL &mt LSHIFT ESC &lt L_SYM TAB
+        &lt L_NUM ENTER &ltb L_NAV SPACE &kp BSPC &kp BSPC
       >;
     };
 
