@@ -6,8 +6,7 @@
 #define L_DEFAULT 0
 #define L_NUM     1
 #define L_SYM     2
-#define L_NAV     3
-#define L_BT      4
+#define L_BT      3
 
 //------------------------------------------------------------------------------
 // Defaults
@@ -45,18 +44,6 @@
       bindings = <&kp>, <&kp>;
       display-name = "Balanced-Mod-Tap";
     };
-
-    ltb: balanced_layer_tap {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      flavor = "balanced";
-      tapping-term-ms = <250>;
-      quick-tap-ms = <300>;
-      require-prior-idle-ms = <200>;
-      bindings = <&mo>, <&kp>;
-      display-name = "Balanced-Layer-Tap";
-    };
-
   };
 
   //----------------------------------------------------------------------------
@@ -104,8 +91,8 @@
         &none &kp SEMI &kp Q &kp J &kp K &kp X &none
         &none &kp B &kp M &kp W &kp V &kp Z &none
 
-        &lt L_NAV DOWN &lt L_NAV UP &mt LSHIFT ESC &lt L_SYM TAB
-        &lt L_NUM ENTER &kp SPACE &lt L_NAV LEFT &lt L_NAV RIGHT
+        &kp DOWN &kp UP &mt LSHIFT ESC &lt L_SYM TAB
+        &lt L_NUM ENTER &kp SPACE &kp LEFT &kp RIGHT
       >;
     };
 
@@ -123,8 +110,8 @@
         &none &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT &none
         &none &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
 
-        &none &none &none &caps_word
-        &none &none &none &none
+        &kp PGDN &kp PGUP &none &caps_word
+        &none &none &kp HOME &kp END
       >;
     };
 
@@ -142,27 +129,8 @@
         &none &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &kp LC(LS(SPACE)) &none
         &none &kp TILDE &kp FSLH &kp QMARK &kp BSLH &kp PIPE &none
 
-        &none &none &none &none
-        &caps_word &none &none &none
-      >;
-    };
-
-    nav_layer {
-      bindings = <
-        &none &none &none &none &none
-        &none &none &none &none &none
-
-        &none &none &none &none &none &none &none
-        &none &none &none &none &none &none &none
-
-        &none &none &kp HOME &kp PGUP &kp END &none &none
-        &none &none &kp LEFT &kp UP &kp RIGHT &none &none
-
-        &none &none &none &kp PGDN &none &none &none
-        &none &none &none &kp DOWN &none &none &none
-
         &kp PGDN &kp PGUP &none &none
-        &none &none &kp HOME &kp END
+        &caps_word &none &kp HOME &kp END
       >;
     };
 
