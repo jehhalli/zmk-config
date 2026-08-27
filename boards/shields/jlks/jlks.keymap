@@ -23,14 +23,29 @@
   quick-tap-ms = <300>;
 };
 
+
 / {
 
-//------------------------------------------------------------------------------
-// Behaviors
-//------------------------------------------------------------------------------
+  //----------------------------------------------------------------------------
+  // Combos
+  //----------------------------------------------------------------------------
+
+  combos {
+    compatible = "zmk,combos";
+
+    combo_delete {
+      timeout-ms = <50>;
+      layers = <L_DEFAULT>;
+      key-positions = <30 31>;
+      bindings = <&kp ESC>;
+    };
+  };
+
+  //----------------------------------------------------------------------------
+  // Behaviors
+  //----------------------------------------------------------------------------
 
   behaviors {
-
     mtb: balanced_mod_tap {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -48,42 +63,23 @@
       flavor = "balanced";
       tapping-term-ms = <250>;
       quick-tap-ms = <300>;
-      require-prior-idle-ms = <250>;
+      require-prior-idle-ms = <125>;
       bindings = <&mo>, <&kp>;
       display-name = "Balanced-Layer-Tap";
     };
-
   };
 
   //----------------------------------------------------------------------------
-  // Combos
+  // Conditional layers
   //----------------------------------------------------------------------------
 
-  combos {
-    compatible = "zmk,combos";
-
-    combo_bootloader_l {
-      key-positions = <0 1 2 3>;
-      bindings = <&bootloader>;
-    };
-
-    combo_bootloader_r {
-      key-positions = <6 7 8 9>;
-      bindings = <&bootloader>;
-    };
-
-    combo_escape {
-      timeout-ms = <100>;
-      key-positions = <1 2>;
-      bindings = <&kp ESC>;
-    };
-
-    combo_bt_layer {
-      key-positions = <30 33>;
-      bindings = <&mo L_BT>;
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <L_NUM L_SYM>;
+      then-layer = <L_BT>;
     };
   };
-
 
   //----------------------------------------------------------------------------
   // Keymap
@@ -103,72 +99,67 @@
         &kp SEMI &kp Q &kp J &kp K &kp X
         &kp B &kp M &kp W &kp V &kp Z
 
-        &mt LSHIFT BSPC &lt L_SYM TAB
-        &lt L_NUM ENTER &ltb L_NAV SPACE
+        &mt LSHIFT BSPC &lt L_SYM TAB &lt L_NUM ENTER &ltb L_NAV SPACE
       >;
     };
 
     num_layer {
       bindings = <
         &none &trans &trans &none &none
-        &none &kp LPAR &kp RPAR &none &none
+        &none &kp LC(LS(TAB)) &kp LC(TAB) &none &none
 
         &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
         &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
 
         &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT
-        &kp CARET &kp AMPS &kp STAR &none &none
+        &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR
 
-        &none &caps_word
-        &none &none
+        &none &caps_word &none &none
       >;
     };
 
     sym_layer {
       bindings = <
-        &kp LC(LG(Q)) &none &none &none &none
-        &none &kp LBKT &kp RBKT &kp LBRC &kp RBRC
+        &none &none &kp LBRC &kp RBRC &kp LC(LG(Q))
+        &none &kp LBKT &kp RBKT &none &none
 
-        &none &kp LC(UP) &kp LC(LS(TAB)) &kp LC(TAB) &kp ESC
-        &kp GRAVE &kp MINUS &kp UNDER &kp EQUAL &kp PLUS
+        &kp TILDE &kp GRAVE &kp QMARK &kp FSLH &kp LC(UP)
+        &none &kp MINUS &kp UNDER &none &none
 
-        &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT)) &kp LC(LS(SPACE))
-        &kp TILDE &kp FSLH &kp BSLH &kp QMARK &kp PIPE
+        &none &none &kp PIPE &kp BSLH &none
+        &none &kp PLUS &kp EQUAL &none &none
 
-        &kp DEL &none
-        &caps_word &none
+        &trans &trans &trans &trans
       >;
     };
 
     nav_layer {
       bindings = <
-        &none &none &none &none &none
-        &none &none &none &none &none
+        &trans &trans &trans &trans &trans
+        &none &kp HOME &kp PGDN &kp PGUP &kp END
 
-        &none &kp HOME &kp PGUP &kp END &none
-        &none &kp LEFT &kp UP &kp RIGHT &none
+        &trans &trans &trans &trans &trans
+        &none &kp LEFT &kp DOWN &kp UP &kp RIGHT
 
-        &none &none &kp PGDN &none &none
-        &none &none &kp DOWN &none &none
+        &trans &trans &trans &trans &trans
+        &kp LC(LS(SPACE)) &kp LC(LS(LEFT)) &kp LC(LS(DOWN)) &kp LC(LS(UP)) &kp LC(LS(RIGHT))
 
-        &none &none
-        &none &none
+        &kp DEL &none &none &none
       >;
     };
 
     bluetooth_layer {
       bindings = <
+        &bt BT_CLR_ALL &none &none &none &none
         &none &none &none &none &none
-        &none &bt BT_SEL 0 &bt BT_SEL 1 &none &none
 
+        &bt BT_SEL 0 &bt BT_SEL 1 &none &none &none
+        &none &out OUT_BLE &out OUT_USB &none &none
+
+        &bt BT_DISC 0 &bt BT_DISC 1 &none &none &none
         &none &none &none &none &none
-        &none &out OUT_BLE &out OUT_USB &none &bt BT_CLR_ALL
 
-        &none &none &none &none &none
-        &none &bt BT_DISC 0 &bt BT_DISC 1 &none &none
-
-        &none &none
-        &none &none
+        &none &none &none &none
       >;
     };
 
