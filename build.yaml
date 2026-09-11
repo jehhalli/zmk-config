@@ -24,9 +24,3 @@ include:
     shield: jlkfs_left
   - board: nice_nano//zmk
     shield: jlkfs_right
-  - board: nice_nano//zmk
-    shield: jlol
-    artifact-name: jlol_bt
-  - board: nice_nano//zmk
-    shield: jlol
-    cmake-args: -DCONFIG_ZMK_BLE=n -DCONFIG_BT=n
