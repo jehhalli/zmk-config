@@ -13,6 +13,7 @@
 #define L_SYM     2
 #define L_BT      3
 #define L_MOUSE   4
+#define L_PRECISE 5
 
 #define QUICK_TAP_MS 300
 
@@ -53,20 +54,21 @@
       bindings = <&kp>, <&kp>;
     };
 
-    togmo: toggle_momentary {
+    tomo: toggle_momentary {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
       tapping-term-ms = <250>;
       quick-tap-ms = <QUICK_TAP_MS>;
-      bindings = <&mo>, <&tog>;
+      bindings = <&mo>, <&to>;
     };
 
-    loff: layer_off {
-      compatible = "zmk,behavior-toggle-layer";
+    mmvu: uniform_mmv {
+      compatible = "zmk,behavior-input-two-axis";
+      x-input-code = <INPUT_REL_X>;
+      y-input-code = <INPUT_REL_Y>;
       #binding-cells = <1>;
-      toggle-mode = "off";
-      locking;
+      acceleration-exponent = <0>;
     };
   };
 
@@ -95,13 +97,13 @@
     combo_mouse_layer_qj {
       key-positions = <40 41>;
       timeout-ms = <75>;
-      bindings = <&togmo L_MOUSE L_MOUSE>;
+      bindings = <&tomo L_MOUSE L_MOUSE>;
     };
 
-    combo_mouse_layer_off_jk {
+    combo_back_home_jk {
       key-positions = <41 42>;
       timeout-ms = <75>;
-      bindings = <&loff L_MOUSE>;
+      bindings = <&to L_DEFAULT>;
     };
   };
 
@@ -203,7 +205,26 @@
         &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
         &none &none &none &mmv MOVE_DOWN &none &none &none
 
-        &none &mkp MCLK &mkp LCLK &mkp RCLK
+        &none &none &none &to L_PRECISE
+        &mkp RCLK &mkp LCLK &mkp MCLK &none
+      >;
+    };
+
+    precise_mouse_layer {
+      bindings = <
+        &none &none &none &none &none
+        &none &none &none &none &none
+
+        &none &none &none &none &none &none &none
+        &none &none &none &none &none &none &none
+
+        &none &none &msc SCRL_LEFT &msc MOVE_Y(30) &msc MOVE_Y(10) &msc SCRL_RIGHT &none
+        &none &none &mmvu MOVE_X(-100) &mmvu MOVE_Y(-100) &mmvu MOVE_X(100) &none &none
+
+        &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
+        &none &none &none &mmvu MOVE_Y(100) &none &none &none
+
+        &none &none &to L_MOUSE &none
         &mkp RCLK &mkp LCLK &mkp MCLK &none
       >;
     };
