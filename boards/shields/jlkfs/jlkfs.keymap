@@ -61,6 +61,13 @@
       quick-tap-ms = <QUICK_TAP_MS>;
       bindings = <&mo>, <&tog>;
     };
+
+    loff: layer_off {
+      compatible = "zmk,behavior-toggle-layer";
+      #binding-cells = <1>;
+      toggle-mode = "off";
+      locking;
+    };
   };
 
   //----------------------------------------------------------------------------
@@ -85,10 +92,16 @@
       bindings = <&mo L_BT>;
     };
 
-    combo_mouse_layer {
-      key-positions = <41 42>;
+    combo_mouse_layer_qj {
+      key-positions = <40 41>;
       timeout-ms = <75>;
       bindings = <&togmo L_MOUSE L_MOUSE>;
+    };
+
+    combo_mouse_layer_off_jk {
+      key-positions = <41 42>;
+      timeout-ms = <75>;
+      bindings = <&loff L_MOUSE>;
     };
   };
 
