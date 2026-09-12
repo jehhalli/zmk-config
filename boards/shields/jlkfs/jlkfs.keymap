@@ -13,7 +13,7 @@
 #define L_SYM     2
 #define L_BT      3
 #define L_MOUSE   4
-#define L_PRECISE 5
+#define L_COARSE  5
 
 #define QUICK_TAP_MS 300
 
@@ -54,7 +54,7 @@
       bindings = <&kp>, <&kp>;
     };
 
-    tomo: toggle_momentary {
+    tomo: to_momentary {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       flavor = "hold-preferred";
@@ -192,17 +192,17 @@
         &none &none &none &none &none &none &none
 
         &none &none &msc SCRL_LEFT &msc MOVE_Y(30) &msc MOVE_Y(10) &msc SCRL_RIGHT &none
-        &none &none &mmv MOVE_X(-1600) &mmv MOVE_Y(-1600) &mmv MOVE_X(1600) &none &none
+        &none &none &mmv MOVE_X(-500) &mmv MOVE_Y(-500) &mmv MOVE_X(500) &none &none
 
         &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
-        &none &none &none &mmv MOVE_Y(1600) &none &none &none
+        &none &none &none &mmv MOVE_Y(500) &none &none &none
 
-        &none &none &none &to L_PRECISE
+        &none &none &mo L_COARSE &none
         &mkp RCLK &mkp LCLK &mkp MCLK &none
       >;
     };
 
-    precise_mouse_layer {
+    coarse_mouse_layer {
       bindings = <
         &none &none &none &none &none
         &none &none &none &none &none
@@ -211,12 +211,12 @@
         &none &none &none &none &none &none &none
 
         &none &none &msc SCRL_LEFT &msc MOVE_Y(30) &msc MOVE_Y(10) &msc SCRL_RIGHT &none
-        &none &none &mmv MOVE_X(-800) &mmv MOVE_Y(-800) &mmv MOVE_X(800) &none &none
+        &none &none &mmv MOVE_X(-1500) &mmv MOVE_Y(-1500) &mmv MOVE_X(1500) &none &none
 
         &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
-        &none &none &none &mmv MOVE_Y(800) &none &none &none
+        &none &none &none &mmv MOVE_Y(1500) &none &none &none
 
-        &none &none &to L_MOUSE &none
+        &none &none &none &none
         &mkp RCLK &mkp LCLK &mkp MCLK &none
       >;
     };
