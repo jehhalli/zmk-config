@@ -68,7 +68,7 @@
       x-input-code = <INPUT_REL_X>;
       y-input-code = <INPUT_REL_Y>;
       #binding-cells = <1>;
-      time-to-max-speed-ms = <0>;
+      time-to-max-speed-ms = <100>;
       acceleration-exponent = <0>;
     };
   };
@@ -220,10 +220,10 @@
         &none &none &none &none &none &none &none
 
         &none &none &msc SCRL_LEFT &msc MOVE_Y(30) &msc MOVE_Y(10) &msc SCRL_RIGHT &none
-        &none &none &mmvu MOVE_X(-100) &mmvu MOVE_Y(-100) &mmvu MOVE_X(100) &none &none
+        &none &none &mmvu MOVE_X(-1000) &mmvu MOVE_Y(-1000) &mmvu MOVE_X(1000) &none &none
 
         &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
-        &none &none &none &mmvu MOVE_Y(100) &none &none &none
+        &none &none &none &mmvu MOVE_Y(1000) &none &none &none
 
         &none &none &to L_MOUSE &none
         &mkp RCLK &mkp LCLK &mkp MCLK &none
