@@ -33,7 +33,7 @@
 
 &mmv {
   time-to-max-speed-ms = <650>;
-  acceleration-exponent = <0>;
+  acceleration-exponent = <1>;
 };
 
 //------------------------------------------------------------------------------
@@ -192,10 +192,10 @@
         &none &none &none &none &none &none &none
 
         &none &none &msc SCRL_LEFT &msc MOVE_Y(30) &msc MOVE_Y(10) &msc SCRL_RIGHT &none
-        &none &none &mmv MOVE_X(-500) &mmv MOVE_Y(-500) &mmv MOVE_X(500) &none &none
+        &none &none &mmv MOVE_X(-1500) &mmv MOVE_Y(-1500) &mmv MOVE_X(1500) &none &none
 
         &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
-        &none &none &none &mmv MOVE_Y(500) &none &none &none
+        &none &none &none &mmv MOVE_Y(1500) &none &none &none
 
         &none &none &mo L_COARSE &none
         &mkp RCLK &mkp LCLK &mkp MCLK &none
@@ -211,10 +211,10 @@
         &none &none &none &none &none &none &none
 
         &none &none &msc SCRL_LEFT &msc MOVE_Y(30) &msc MOVE_Y(10) &msc SCRL_RIGHT &none
-        &none &none &mmv MOVE_X(-1500) &mmv MOVE_Y(-1500) &mmv MOVE_X(1500) &none &none
+        &none &none &mmv MOVE_X(-3000) &mmv MOVE_Y(-3000) &mmv MOVE_X(3000) &none &none
 
         &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
-        &none &none &none &mmv MOVE_Y(1500) &none &none &none
+        &none &none &none &mmv MOVE_Y(3000) &none &none &none
 
         &none &none &none &none
         &mkp RCLK &mkp LCLK &mkp MCLK &none
