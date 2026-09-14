@@ -185,19 +185,19 @@
     mouse_layer {
       bindings = <
         &none &none &none &none &none
-        &none &none &none &none &none
+        &none &mmv MOVE_X(-2000) &mmv MOVE_Y(-1600) &mmv MOVE_X(2000) &none
 
         &none &none &none &none &none &none &none
-        &none &none &none &mmv MOVE_Y(-1600) &none &none &none
+        &none &none &none &mmv MOVE_Y(1600) &none &none &none
 
         &none &none &msc SCRL_LEFT &msc MOVE_Y(30) &msc MOVE_Y(10) &msc SCRL_RIGHT &none
-        &none &mmv MOVE_X(-2000) &mmv MOVE_X(-500) &mmv MOVE_Y(-400) &mmv MOVE_X(500) &mmv MOVE_X(2000) &none
+        &none &none &mmv MOVE_X(-500) &mmv MOVE_Y(-400) &mmv MOVE_X(500) &none &none
 
         &none &none &none &msc MOVE_Y(-30) &msc MOVE_Y(-10) &none &none
         &none &none &none &mmv MOVE_Y(400) &none &none &none
 
         &none &none &none &none
-        &mkp RCLK &mkp LCLK &mkp MCLK &mmv MOVE_Y(1600)
+        &mkp RCLK &mkp LCLK &mkp MCLK &none
       >;
     };
 
