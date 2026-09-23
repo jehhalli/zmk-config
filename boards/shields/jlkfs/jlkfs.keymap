@@ -8,6 +8,8 @@
 #define L_SYM     2
 #define L_BT      3
 
+#define QUICK_TAP_MS 300
+
 //------------------------------------------------------------------------------
 // Defaults
 //------------------------------------------------------------------------------
@@ -15,11 +17,11 @@
 &lt {
   tapping-term-ms = <150>;
   flavor = "hold-preferred";
-  quick-tap-ms = <300>;
+  quick-tap-ms = <QUICK_TAP_MS>;
 };
 
 &mt {
-  quick-tap-ms = <300>;
+  quick-tap-ms = <QUICK_TAP_MS>;
 };
 
 / {
@@ -35,10 +37,9 @@
       #binding-cells = <2>;
       flavor = "balanced";
       tapping-term-ms = <250>;
-      quick-tap-ms = <300>;
+      quick-tap-ms = <QUICK_TAP_MS>;
       require-prior-idle-ms = <125>;
       bindings = <&kp>, <&kp>;
-      display-name = "Balanced-Mod-Tap";
     };
   };
 
